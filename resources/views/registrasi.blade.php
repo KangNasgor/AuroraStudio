@@ -24,7 +24,7 @@
         <div class="row g-2">
             <div class="col-6">
                 <div class="p-3">
-                    <h1 class="text">THE BEST STUDIO</h1>
+                    <h1 class="text">THE BEST STUDIO.</h1>
                     <img src="logo.jpg" alt="" class="logo">
                 </div>
             </div>

@@ -24,3 +24,6 @@ Route::controller(BookingController::class)->group(function () {
 Route::get('/infopesanan', function () {
     return view('infopesanan');
 });
+Route::get('/example', function () {
+    return view('example');
+});
