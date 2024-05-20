@@ -3,21 +3,33 @@
 @section('content')
 <style>
     body {
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: url("{{asset('img/background.jpeg')}}");
     }
 
     .textinfopesanan {
+        color: black;
         text-align: center;
         margin-top: 2%;
     }
 
+    .tableinformation {
+    background-color: #4683b4a9;
+    backdrop-filter: blur(5px); /* Efek blur hanya diterapkan pada latar belakang tabel */
+    border: 2px solid black;
+}
+
     .tableinformation th, td {
+        color: white;
         border: 2px solid black;
-        padding: 25px; /* Mengurangi padding agar tabel lebih kecil */
-        background: rgb(255,255,255);
-        background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,255,240,1) 4%);
+        background-color: #4683b4a9;
+        padding: 25px; /* Mengurangi padding agar tabel lebih kecil */ 
     }
 
     .tableinformation td {
+        color: white;
+        background-color: #4683b4a9;    
         border-bottom: 2px solid black; /* Mengatur garis bawah tebal untuk elemen td */
     }
 
@@ -33,9 +45,9 @@
     }
 
     .card {
-        background-color: rgba(0, 0, 0, 0.322);
+        background-color: #6494ed84;
         border-radius: 15px;
-        box-shadow: 0 0 35px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 0 3   5px rgba(0, 0, 0, 0.2);
     }
 
     
@@ -43,13 +55,12 @@
 <section id="hero" class="container">
     <!--text infopesanan-->
     <div class="textinfopesanan">
-        <br>
         <h1>INFO PESANAN</h1>
     </div>
     <br>
     <!--bagian dalam infopesanan-->
     <div class="row justify-content-center">
-        <div class="card text-center col-md-8" style="width: 40rem;">
+        <div class="card text-center col-md-8" style="width: 50rem;">
             <div class="container mt-3 ">
                 <table class="table tableinformation">
                     <thead>
