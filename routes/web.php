@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\LoginController;
+use App\Http\Controllers\SessionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,11 +21,11 @@ use App\Http\Controllers\LoginController;
 
 //  });
 // login proses//
-Route::get('/login', [LoginController::class, 'index'])->name('login');
-Route::post('/login.proses', [LoginController::class, 'login_proses'])->name('login.proses');
+Route::get('/sesi', [SessionController::class, 'index'])->name('sesi');
+Route::post('/sesi/login', [SessionController::class, 'login'])->name('login.proses');
 //register proses//
-Route::get('/registrasi', [LoginController::class, 'registrasi'])->name('registrasi');
-Route::post('/registrasi.proses', [LoginController::class, 'registrasi_proses'])->name('registrasi.proses');
+Route::get('/registrasi', [SessionControllerController::class, 'registrasi'])->name('registrasi');
+Route::post('/registrasi.proses', [SessionControllerController::class, 'registrasi_proses'])->name('registrasi.proses');
 
 
 

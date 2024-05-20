@@ -8,32 +8,30 @@ use App\Models\User;
 use Illuminate\Support\Facades\Hash;
                                                                                                          
 
-class LoginController extends Controller
+class SessionController extends Controller
 {
 public function index(){
-    return view('sesi.index');
+    return view('sesi/index');
 }  
-public function login_proses(Request $request){
-    $request->validate([
-        'email' => 'required|email',
-        'password' => 'required',
-        //  |min:6
-    ]);
+public function login(Request $request){
+   $request->validate([
+    'email'=>'required',
+    'password'=>'required'
+   ],[
+    'email.required'=>'Email waib di isi',
+    'password.required'=>'Password waib di isi',
+   ]);
 
-    $data = $request->only('email', 'password');
-
-    if (Auth::attempt( $data)) {
-        // Redirect based on role
-        $user = Auth::user();
-        if ($data) {
-            // routenya kalo mau diubah monggo, tapi homenya admin ada didalam admin(admin/home). sedangkan home user ada didalam view(view/home)
-            return redirect()->route('example');
+   $infologin = [
+    'email' => $request->email,
+    'password' => $request->password
+   ]; 
+        if (Auth::attempt($infologin)) {
+            return redirect('sesi')->withError;
         } else {
-            return redirect()->route('example');
+            return 'gagal';
         }
-    } else {
-        return redirect()->route('login')->with('failed', 'Email atau password salah.');
-    }
+   
 }
 public function registrasi(){
     return view('auth.registrasi');

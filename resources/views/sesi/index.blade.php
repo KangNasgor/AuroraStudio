@@ -28,19 +28,19 @@
                 </div>
             </div>
             <div class="login-container col-6 p-3 shadow p-3 mb-5 bg-body-tertiary rounded" >
-                <form action="{{ route('login.proses') }}" class="form" method="POST">
+                <form action="sesi/login" class="form" method="POST">
                     @csrf
                     <h2 class="mb-4">Login</h2>
                     <p class="email">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" name="email" placeholder="Email" class="mb-2" style="margin-bottom: 10px;">
+                    <label for="email" class="form-label">Email</label>
+                        <input type="email" name="email" placeholder="Email" class="form-control" style="margin-bottom: 10px;">
                     </p>
                     @error('email')
                          <small>{{ $message }}</small>
                     @enderror
                     <p class="password">
                     <label for="password" class="form-label">Password</label>
-                        <input type="password" name="password" placeholder="Password" class="mb-2" style="margin-bottom: 10px;">
+                        <input type="password" name="password" placeholder="Password" class="form-control" style="margin-bottom: 10px;">
                     </p>
                     @error('password')
                          <small>{{ $message }}</small>
