@@ -13,6 +13,14 @@ return new class extends Migration
     {
         Schema::create('infopesanans', function (Blueprint $table) {
             $table->id();
+            $table->string('nama');
+            $table->string('nomor_wa');
+            $table->string('email');
+            $table->string('lokasi');
+            $table->enum('paket', ['Wisuda', 'Pre-Wedd', 'PasFoto', 'Maternity', 'Photoshoot','Personal']);
+            $table->enum('tempat', ['Indoor', 'Outdoor']);
+            $table->date('tanggal');
+            $table->time('jam');
             $table->timestamps();
         });
     }

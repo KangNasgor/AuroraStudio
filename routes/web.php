@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookingController;
+use App\Http\Controllers\SessionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,7 +19,10 @@ Route::get('/login', function () {
 });
 
 Route::controller(BookingController::class)->group(function () {
-    Route::get('/infopesanan/{id}','infopesanan')->name('booking.infopesanan');
+    Route::get('/infopesanan','infopesanan')->name('infopesanan.index');
+    Route::get('/formbooking','form')->name('form.index');
+    Route::post('/formbooking/kirim','formStore')->name('form.store');
+
 });
 
 Route::get('/booking', function () {
@@ -35,5 +39,5 @@ Route::get('/example', function () {
 Route::get('/sesi', [SessionController::class, 'index'])->name('sesi');
 Route::post('/sesi/login', [SessionController::class, 'login'])->name('login.proses');
 //register proses//
-Route::get('/registrasi', [SessionControllerController::class, 'registrasi'])->name('registrasi');
-Route::post('/registrasi.proses', [SessionControllerController::class, 'registrasi_proses'])->name('registrasi.proses');
+Route::get('/registrasi', [SessionController::class, 'registrasi'])->name('registrasi');
+Route::post('/registrasi.proses', [SessionController::class, 'registrasi_proses'])->name('registrasi.proses');
