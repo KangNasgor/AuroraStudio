@@ -5,14 +5,13 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
-use App\Http\Controllers\Hash;
-// use App\Models\User;
+use Illuminate\Support\Facades\Hash;
                                                                                                          
 
 class LoginController extends Controller
 {
 public function index(){
-    return view('login.index');
+    return view('sesi.index');
 }  
 public function login_proses(Request $request){
     $request->validate([
@@ -36,28 +35,6 @@ public function login_proses(Request $request){
         return redirect()->route('login')->with('failed', 'Email atau password salah.');
     }
 }
-// public function login_proses(Request $request){
-//     $credentials = $request->validate([
-//    'email' => 'required',
-//    'password' => 'required',
-//     ]);
-    
-//     $credentials = User::where('email', $credentials['email'])->first();
-
-//     if (!$credentials || !Hash::check($credentials['password'], $password)) {
-//         return back()->withErrors([
-//             'email' => 'The provided credentials do not match our records.',
-//         ]);
-//     }
-
-//     // Jika autentikasi berhasil
-//     Auth::login($User);
-
-//     return redirect()->intended('/');
-//     return redirect()->route('dashboard');
-//         return redirect()->route('login')->with('failed', 'email atau password salah');
-//     }
-
 public function registrasi(){
     return view('auth.registrasi');
 }

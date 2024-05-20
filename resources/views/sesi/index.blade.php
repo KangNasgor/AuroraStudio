@@ -32,14 +32,14 @@
                     @csrf
                     <h2 class="mb-4">Login</h2>
                     <p class="email">
-                        Email
-                        <input type="text" name="email" placeholder="Email" class="mb-2" style="margin-bottom: 10px;">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" name="email" placeholder="Email" class="mb-2" style="margin-bottom: 10px;">
                     </p>
                     @error('email')
                          <small>{{ $message }}</small>
                     @enderror
                     <p class="password">
-                        Password
+                    <label for="password" class="form-label">Password</label>
                         <input type="password" name="password" placeholder="Password" class="mb-2" style="margin-bottom: 10px;">
                     </p>
                     @error('password')
