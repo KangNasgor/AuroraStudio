@@ -30,6 +30,7 @@
             <div class="login-container col-6 p-3 shadow p-3 mb-5 bg-body-tertiary rounded" >
                 <form action="{{ route('login.proses') }}" class="form" method="POST">
                     @csrf
+                    @method('POST')
                     <h2 class="mb-4">Login</h2>
                     <p class="email">
                         Email
