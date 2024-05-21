@@ -45,10 +45,7 @@ Route::post('/sesi/login', [SessionController::class, 'login'])->name('login.pro
 //register proses//
 Route::get('/registrasi', [SessionController::class, 'registrasi'])->name('registrasi');
 Route::post('/registrasi.proses', [SessionController::class, 'registrasi_proses'])->name('registrasi.proses');
-<?php
 
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\SessionController;
 
 /*
 |--------------------------------------------------------------------------
