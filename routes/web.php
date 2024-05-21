@@ -21,7 +21,9 @@ Route::get('/example', function () {
 Route::get('/login', function () {
     return view('login');
 });
-
+Route::get('/', function (){
+    return redirect('/login');
+});
 Route::controller(BookingController::class)->group(function () {
     Route::get('/infopesanan','infopesanan')->name('infopesanan.index');
     Route::get('/formbooking','form')->name('form.index');

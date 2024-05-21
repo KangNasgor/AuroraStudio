@@ -23,8 +23,7 @@ public function login_proses(Request $request){
         'password' => $request->password,
     ]);
     return redirect()->route('dashboard');
-        return redirect()->route('login')->with('failed', 'email atau password salah');
-    }
+}
 
 public function registrasi(){
     return view('auth.registrasi');
@@ -45,8 +44,7 @@ public function registrasi_proses(Request $request){
            
 
             return redirect()->route('dashboard');
-            return redirect()->route('register')->with('failed', 'email atau password salah');
-    }
+}
 
     public function logout(){
         auth::logout();
