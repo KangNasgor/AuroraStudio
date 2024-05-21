@@ -3,6 +3,10 @@
 use Monolog\Handler\NullHandler;
 use Monolog\Handler\StreamHandler;
 use Monolog\Handler\SyslogUdpHandler;
+<<<<<<< HEAD
+use Monolog\Processor\PsrLogMessageProcessor;
+=======
+>>>>>>> 64c44a93efdb34e7998fabcfc13992e2a93c9d64
 
 return [
 
@@ -61,6 +65,10 @@ return [
             'driver' => 'single',
             'path' => storage_path('logs/laravel.log'),
             'level' => env('LOG_LEVEL', 'debug'),
+<<<<<<< HEAD
+            'replace_placeholders' => true,
+=======
+>>>>>>> 64c44a93efdb34e7998fabcfc13992e2a93c9d64
         ],
 
         'daily' => [
@@ -68,6 +76,10 @@ return [
             'path' => storage_path('logs/laravel.log'),
             'level' => env('LOG_LEVEL', 'debug'),
             'days' => 14,
+<<<<<<< HEAD
+            'replace_placeholders' => true,
+=======
+>>>>>>> 64c44a93efdb34e7998fabcfc13992e2a93c9d64
         ],
 
         'slack' => [
@@ -76,6 +88,10 @@ return [
             'username' => 'Laravel Log',
             'emoji' => ':boom:',
             'level' => env('LOG_LEVEL', 'critical'),
+<<<<<<< HEAD
+            'replace_placeholders' => true,
+=======
+>>>>>>> 64c44a93efdb34e7998fabcfc13992e2a93c9d64
         ],
 
         'papertrail' => [
@@ -87,6 +103,10 @@ return [
                 'port' => env('PAPERTRAIL_PORT'),
                 'connectionString' => 'tls://'.env('PAPERTRAIL_URL').':'.env('PAPERTRAIL_PORT'),
             ],
+<<<<<<< HEAD
+            'processors' => [PsrLogMessageProcessor::class],
+=======
+>>>>>>> 64c44a93efdb34e7998fabcfc13992e2a93c9d64
         ],
 
         'stderr' => [
@@ -97,16 +117,29 @@ return [
             'with' => [
                 'stream' => 'php://stderr',
             ],
+<<<<<<< HEAD
+            'processors' => [PsrLogMessageProcessor::class],
+=======
+>>>>>>> 64c44a93efdb34e7998fabcfc13992e2a93c9d64
         ],
 
         'syslog' => [
             'driver' => 'syslog',
             'level' => env('LOG_LEVEL', 'debug'),
+<<<<<<< HEAD
+            'facility' => LOG_USER,
+            'replace_placeholders' => true,
+=======
+>>>>>>> 64c44a93efdb34e7998fabcfc13992e2a93c9d64
         ],
 
         'errorlog' => [
             'driver' => 'errorlog',
             'level' => env('LOG_LEVEL', 'debug'),
+<<<<<<< HEAD
+            'replace_placeholders' => true,
+=======
+>>>>>>> 64c44a93efdb34e7998fabcfc13992e2a93c9d64
         ],
 
         'null' => [
