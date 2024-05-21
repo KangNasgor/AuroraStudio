@@ -22,10 +22,17 @@ use App\Http\Controllers\SessionController;
 //  });
 // login proses//
 Route::get('/sesi', [SessionController::class, 'index'])->name('sesi');
-Route::post('/sesi/login', [SessionController::class, 'login'])->name('login.proses');
+Route::post('/login', [SessionController::class, 'login'])->name('login');
 //register proses//
-Route::get('/registrasi', [SessionControllerController::class, 'registrasi'])->name('registrasi');
-Route::post('/registrasi.proses', [SessionControllerController::class, 'registrasi_proses'])->name('registrasi.proses');
+Route::get('/registrasi', [SessionController::class, 'registrasi'])->name('registrasi');
+Route::post('/proses', [SessionController::class, 'proses'])->name('proses');
+
+Route::get('/example', function () {
+    return view('sesi/example');
+})->name('example');
+Route::get('/index', function () {
+    return view('sesi/index');
+})->name('index');
 
 
 

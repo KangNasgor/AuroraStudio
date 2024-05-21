@@ -28,12 +28,12 @@
                 </div>
             </div>
             <div class="login-container col-6 p-3 shadow p-3 mb-5 bg-body-tertiary rounded" >
-                <form action="sesi/login" class="form" method="POST">
+                <form action="/login" class="form" method="POST">
                     @csrf
                     <h2 class="mb-4">Login</h2>
                     <p class="email">
                     <label for="email" class="form-label">Email</label>
-                        <input type="email" name="email" placeholder="Email" class="form-control" style="margin-bottom: 10px;">
+                        <input type="email" name="email" input="{{ Session::get('email') }}"  placeholder="Email" class="form-control" style="margin-bottom: 10px;">
                     </p>
                     @error('email')
                          <small>{{ $message }}</small>
