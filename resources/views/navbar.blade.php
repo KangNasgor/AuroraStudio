@@ -40,7 +40,7 @@
   <nav class="navbar sticky-top navbar-expand-lg navbar-dark navbar-custom">
       <div class="container-fluid">
           <a class="navbar-brand" href="#">
-            <img src="{{ asset('publicimage/logoaurora.jpg') }}" alt="Logo">
+            <img src="{{ asset('img/aurorastudio.jpg') }}" alt="Logo">
             <span class="navbar-brand-text">Aurora Photo Studio</span>
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
