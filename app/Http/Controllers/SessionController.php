@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
-
+use Illuminate\Support\Facades\Log;
                                                                                                          
 
 class SessionController extends Controller
@@ -18,7 +18,7 @@ public function index(){
 public function login(Request $request){
     $user = Users::where('email', '=', $request->email)->first();
     if(!$user){
-        echo "email not found";
+        Log::info("email not found");
         return redirect()->back();
     }
     else{
@@ -26,18 +26,18 @@ public function login(Request $request){
             'email' => ['required', 'string'],
             'password' => ['required', 'string']
         ]);
-        echo "validator succeed";
+        Log::info("Validator gg");
         if ($validator->fails()) {
-            echo "validator failed";
+            Log::info("Validator failed");
             return redirect()->back();
         } else {
             if($user->password === $request->password){
                 Auth::login($user);
-                echo "berhasil";
-                return redirect()->route('/example');
+                Log::info("berhasil");
+                return redirect()->route('example');
             }
             else{
-                echo "password not found";
+                Log::info("password not found");
                 return redirect()->back();
             }
         }
