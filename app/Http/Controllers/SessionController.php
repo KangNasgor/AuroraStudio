@@ -59,7 +59,6 @@ public function proses(Request $request){
         ]);
 
             return redirect()->route('index');
-            echo "pler";
     }
 
     public function logout(){
