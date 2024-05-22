@@ -45,11 +45,11 @@ public function registrasi(){
 }
 public function proses(Request $request){
         // Validasi input
-        // $request->validate([
-        //     'name' => 'required|max:225',
-        //     'email' => 'required|email|unique:users,email',
-        //     'password' => 'required',
-        // ]);
+        $request->validate([
+            'name' => 'required|max:225',
+            'email' => 'required|email|unique:users,email',
+            'password' => 'required',
+        ]);
 
         // Buat user baru
         User::create([

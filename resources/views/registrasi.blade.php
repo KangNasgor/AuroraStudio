@@ -30,7 +30,7 @@
             </div>
         <div class="login-container col-6 p-3 shadow p-3 mb-5 bg-body-tertiary rounded">
             <h2 class="mb-4">Register</h2>
-            <form action="{{ route('registrasi.proses') }}" class="form" method="POST">
+            <form action="/proses" class="form" method="POST">
                 @csrf
                 <p class="username" style="text-align:left;">
                   Username
@@ -57,7 +57,7 @@
                  <input type="submit" value="registrasi" name="registrasi" class="login mb-3">
 
                 <div class="forgot-password mb-4" style="text-decoration: none;">
-                <a href="{{ route('login') }}" ><B>kembali</B></a>
+                <a href="/login" ><B>kembali</B></a>
             </div>
         </div>
             </form>
