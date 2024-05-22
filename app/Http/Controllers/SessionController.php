@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
+
                                                                                                         
 class SessionController extends Controller
 {
@@ -16,7 +17,6 @@ public function index(){
 public function login(Request $request){
     $user = User::where('name', '=', $request->name)->first();
     if(!$user){
-        Log::info("email not found");
         return redirect()->back();
     }
     else{
@@ -24,18 +24,15 @@ public function login(Request $request){
             'email' => ['required', 'string'],
             'password' => ['required', 'string']
         ]);
-        Log::info("Validator gg");
+
         if ($validator->fails()) {
-            Log::info("Validator failed");
             return redirect()->back();
         } else {
             if($user->password === $request->password){
                 Auth::login($user);
-                Log::info("berhasil");
                 return redirect()->route('example');
             }
             else{
-                Log::info("password not found");
                 return redirect()->back();
             }
         }
@@ -55,7 +52,7 @@ public function proses(Request $request){
         // ]);
 
         // Buat user baru
-        Users::create([
+        User::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => hash::make($request->password),
