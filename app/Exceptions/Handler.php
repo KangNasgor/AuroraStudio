@@ -8,6 +8,9 @@ use Throwable;
 class Handler extends ExceptionHandler
 {
     /**
+<<<<<<< HEAD
+     * The list of the inputs that are never flashed to the session on validation exceptions.
+=======
      * A list of exception types with their corresponding custom log levels.
      *
      * @var array<class-string<\Throwable>, \Psr\Log\LogLevel::*>
@@ -27,6 +30,7 @@ class Handler extends ExceptionHandler
 
     /**
      * A list of the inputs that are never flashed to the session on validation exceptions.
+>>>>>>> 64c44a93efdb34e7998fabcfc13992e2a93c9d64
      *
      * @var array<int, string>
      */

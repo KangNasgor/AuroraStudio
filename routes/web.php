@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BookingController;
+use App\Http\Controllers\SessionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,15 +15,49 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 Route::get('/example', function () {
     return view('example');
 });
-//loggin proses//
+Route::get('/login', function () {
+    return view('login');
+});
+Route::get('/', function (){
+    return redirect('/login');
+});
+Route::controller(BookingController::class)->group(function () {
+    Route::get('/infopesanan','infopesanan')->name('infopesanan.index');
+    Route::get('/formbooking','form')->name('form.index');
+    Route::post('/formbooking/kirim','formStore')->name('form.store');
+
+});
+
+Route::get('/booking', function () {
+    return view('booking');
+});
+
+Route::get('/account', function () {
+    return view('account');
+});
+Route::get('/example', function () {
+    return view('example');
+})->name('example');
+// login proses//
 Route::get('/sesi', [SessionController::class, 'index'])->name('sesi');
+
 Route::post('/sesi/login', [SessionController::class, 'login'])->name('sesi/proses');
+
+Route::post('/login', [SessionController::class, 'login'])->name('login');
 //register proses//
-Route::get('/registrasi', [SessionControllerController::class, 'registrasi'])->name('registrasi');
-Route::post('/registrasi.proses', [SessionControllerController::class, 'registrasi_proses'])->name('registrasi.proses');
+Route::get('/registrasi', [SessionController::class, 'registrasi'])->name('registrasi');
+Route::post('/proses', [SessionController::class, 'proses'])->name('proses');
+
+Route::get('/index', function () {
+    return view('sesi/index');
+})->name('index');
+
+
+
+
+
+
+
