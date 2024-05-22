@@ -15,7 +15,7 @@ public function index(){
     return view('sesi/index');
 }  
 public function login(Request $request){
-    $user = User::where('name', '=', $request->name)->first();
+    $user = User::where('email', '=', $request->email)->first();
     if(!$user){
         return redirect()->back();
     }
