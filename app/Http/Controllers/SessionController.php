@@ -16,25 +16,27 @@ public function index(){
 public function login(Request $request){
     $user = User::where('name', '=', $request->name)->first();
     if(!$user){
+        Log::info("email not found");
         return redirect()->back();
-        
     }
     else{
         $validator = Validator::make($request->all(), [
             'email' => ['required', 'string'],
             'password' => ['required', 'string']
         ]);
+        Log::info("Validator gg");
         if ($validator->fails()) {
+            Log::info("Validator failed");
             return redirect()->back();
-            
         } else {
             if($user->password === $request->password){
                 Auth::login($user);
+                Log::info("berhasil");
                 return redirect()->route('example');
             }
             else{
-                return redirect()->back('sesi');
-                echo 'fail';
+                Log::info("password not found");
+                return redirect()->back();
             }
         }
     // Auth::attempt() digunakan untuk mencoba mengotentikasi pengguna menggunakan kredensial yang diberikan (biasanya email dan password). Jika kredensial cocok dengan catatan di database, pengguna akan diautentikasi dan sesi akan dimulai.Namun, Auth::attempt() tidak mengembalikan objek pengguna yang diautentikasi. Sebaliknya, fungsi ini mengembalikan true jika autentikasi berhasil dan false jika gagal. Untuk mendapatkan objek pengguna yang diautentikasi, Anda dapat menggunakan fungsi Auth::user() setelah berhasil memanggil Auth::attempt().
@@ -53,7 +55,7 @@ public function proses(Request $request){
         // ]);
 
         // Buat user baru
-        User::create([
+        Users::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => hash::make($request->password),

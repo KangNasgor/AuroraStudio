@@ -3,26 +3,20 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-<<<<<<< HEAD
-use Illuminate\Support\Facades\Hash;
-=======
->>>>>>> 64c44a93efdb34e7998fabcfc13992e2a93c9d64
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Hash;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\User>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Users>
  */
 class UserFactory extends Factory
 {
     /**
-<<<<<<< HEAD
      * The current password being used by the factory.
      */
     protected static ?string $password;
 
     /**
-=======
->>>>>>> 64c44a93efdb34e7998fabcfc13992e2a93c9d64
      * Define the model's default state.
      *
      * @return array<string, mixed>
@@ -33,22 +27,13 @@ class UserFactory extends Factory
             'name' => fake()->name(),
             'email' => fake()->unique()->safeEmail(),
             'email_verified_at' => now(),
-<<<<<<< HEAD
             'password' => static::$password ??= Hash::make('password'),
-=======
-            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
->>>>>>> 64c44a93efdb34e7998fabcfc13992e2a93c9d64
             'remember_token' => Str::random(10),
         ];
     }
 
     /**
      * Indicate that the model's email address should be unverified.
-<<<<<<< HEAD
-=======
-     *
-     * @return $this
->>>>>>> 64c44a93efdb34e7998fabcfc13992e2a93c9d64
      */
     public function unverified(): static
     {

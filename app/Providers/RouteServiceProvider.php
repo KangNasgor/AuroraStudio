@@ -11,11 +11,7 @@ use Illuminate\Support\Facades\Route;
 class RouteServiceProvider extends ServiceProvider
 {
     /**
-<<<<<<< HEAD
      * The path to your application's "home" route.
-=======
-     * The path to the "home" route for your application.
->>>>>>> 64c44a93efdb34e7998fabcfc13992e2a93c9d64
      *
      * Typically, users are redirected here after authentication.
      *
@@ -28,13 +24,9 @@ class RouteServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-<<<<<<< HEAD
         RateLimiter::for('api', function (Request $request) {
             return Limit::perMinute(60)->by($request->user()?->id ?: $request->ip());
         });
-=======
-        $this->configureRateLimiting();
->>>>>>> 64c44a93efdb34e7998fabcfc13992e2a93c9d64
 
         $this->routes(function () {
             Route::middleware('api')
@@ -45,17 +37,4 @@ class RouteServiceProvider extends ServiceProvider
                 ->group(base_path('routes/web.php'));
         });
     }
-<<<<<<< HEAD
-=======
-
-    /**
-     * Configure the rate limiters for the application.
-     */
-    protected function configureRateLimiting(): void
-    {
-        RateLimiter::for('api', function (Request $request) {
-            return Limit::perMinute(60)->by($request->user()?->id ?: $request->ip());
-        });
-    }
->>>>>>> 64c44a93efdb34e7998fabcfc13992e2a93c9d64
 }
