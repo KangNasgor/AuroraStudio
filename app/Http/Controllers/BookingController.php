@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
 use Illuminate\Http\Request;
-use App\Models\infopesanan;
+use App\Models\Bookings;
 
 class BookingController extends Controller
 {
@@ -32,7 +32,7 @@ class BookingController extends Controller
         'jam'  =>'required',
     ]);
 
-    infopesanan::create ([
+    Bookings::create ([
         'nama'             =>$request->nama,
         'nomor_wa'          =>$request->nomor_wa,
         'email'          =>$request->email,
@@ -54,7 +54,7 @@ class BookingController extends Controller
     }
 
     public function infopesanan(){
-        $bookings = infopesanan::latest()->first();
+        $bookings = Bookings::latest()->first();
         return view('infopesanan', compact('bookings'));
     }
 }
