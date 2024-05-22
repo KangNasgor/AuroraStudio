@@ -43,6 +43,9 @@ Route::get('/example', function () {
 })->name('example');
 // login proses//
 Route::get('/sesi', [SessionController::class, 'index'])->name('sesi');
+
+Route::post('/sesi/login', [SessionController::class, 'login'])->name('sesi/proses');
+
 Route::post('/login', [SessionController::class, 'login'])->name('login');
 //register proses//
 Route::get('/registrasi', [SessionController::class, 'registrasi'])->name('registrasi');
