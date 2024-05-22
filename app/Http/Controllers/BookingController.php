@@ -19,17 +19,17 @@ class BookingController extends Controller
         return view('formbookingstudio');
     }
 
-    public function formStore(request $request)
-    {
-        $this->validate($request,[
-        'nama' =>'required',
-        'nomor_wa'  =>'required',
-        'email'  =>'required',
-        'lokasi'  =>'required',
-        'paket'  =>'required',
-        'tempat' =>'required',
-        'tanggal'  =>'required',
-        'jam'  =>'required',
+    public function formStore(Request $request)
+{
+    $this->validate($request, [
+        'nama' => 'required',
+        'nomor_wa' => 'required',
+        'email' => 'required|email',
+        'paket' => 'required',
+        'tempat' => 'required',
+        'tanggal' => 'required|date',
+        'jam' => 'required|date_format:H:i',
+        'lokasi' => 'required_if:tempat,Outdoor',
     ]);
 
     Bookings::create ([
@@ -44,10 +44,9 @@ class BookingController extends Controller
         'created_at'             =>NOW()
     ]);
 
-    return redirect()->route('infopesanan.index')->with(
-        ['success'=> 'Data Berhasil Ditambah!'] 
-    ); 
-    }
+    return redirect()->route('infopesanan.index')->with('success', 'Data Berhasil Ditambah!');
+}
+
 
     public function booking(){
         return view();

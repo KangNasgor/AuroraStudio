@@ -81,7 +81,7 @@
         var selectTempat = document.getElementById('selectTempat');
         var lokasiContainer = document.getElementById('lokasiContainer');
 
-        if (selectTempat.value === 'outdor') {
+        if (selectTempat.value === 'Outdoor') {
             lokasiContainer.style.display = 'block';
         } else {
             lokasiContainer.style.display = 'none';
