@@ -16,6 +16,7 @@
                     <h2 class="card-title text-center mb-4">Booking Aurora Photo Studio</h2>
                     <form action="{{ route('form.store') }}" method="POST">
                     @csrf
+                    @method('POST')
                         <div class="mb-3">
                             <label for="nama" class="form-label">Nama</label>
                             <input type="text" class="form-control" id="nama" placeholder="Nama" name="nama">
@@ -38,7 +39,6 @@
                                 <option value="PasFoto">Maternity</option>
                                 <option value="Photoshoot">Photoshoot</option>
                                 <option value="Personal">Personal</option>
-
                             </select>
                         </div>
 
@@ -81,7 +81,7 @@
         var selectTempat = document.getElementById('selectTempat');
         var lokasiContainer = document.getElementById('lokasiContainer');
 
-        if (selectTempat.value === 'outdor') {
+        if (selectTempat.value === 'Outdoor') {
             lokasiContainer.style.display = 'block';
         } else {
             lokasiContainer.style.display = 'none';

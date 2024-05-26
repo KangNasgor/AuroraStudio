@@ -1,43 +1,49 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use App\Models\User;
 use Illuminate\Support\Facades\Hash;
-                                                                                                         
+use Illuminate\Support\Facades\Validator;
 
+
+                                                                                                        
 class SessionController extends Controller
 {
 public function index(){
     return view('sesi/index');
 }  
 public function login(Request $request){
-   $request->validate([
-    'email'=>'required',
-    'password'=>'required'
-   ],[
-    'email.required'=>'Email waib di isi',
-    'password.required'=>'Password waib di isi',
-   ]);
+    $user = User::where('email', '=', $request->email)->first();
+    if(!$user){
+        return redirect()->back();
+    }
+    else{
+        $validator = Validator::make($request->all(), [
+            'email' => ['required', 'string'],
+            'password' => ['required', 'string']
+        ]);
 
-   $infologin = [
-    'email' => $request->email,
-    'password' => $request->password
-   ]; 
-        if (Auth::attempt($infologin)) {
-            return redirect('sesi')->withError;
+        if ($validator->fails()) {
+            return redirect()->back();
         } else {
-            return 'gagal';
+            if($user->password === $request->password){
+                Auth::login($user);
+                return redirect()->route('example');
+            }
+            else{
+                return redirect()->back();
+            }
         }
-   
+    // Auth::attempt() digunakan untuk mencoba mengotentikasi pengguna menggunakan kredensial yang diberikan (biasanya email dan password). Jika kredensial cocok dengan catatan di database, pengguna akan diautentikasi dan sesi akan dimulai.Namun, Auth::attempt() tidak mengembalikan objek pengguna yang diautentikasi. Sebaliknya, fungsi ini mengembalikan true jika autentikasi berhasil dan false jika gagal. Untuk mendapatkan objek pengguna yang diautentikasi, Anda dapat menggunakan fungsi Auth::user() setelah berhasil memanggil Auth::attempt().
+
+}
 }
 public function registrasi(){
     return view('auth.registrasi');
 }
-public function registrasi_proses(Request $request){
-       
+public function proses(Request $request){
         // Validasi input
         $request->validate([
             'name' => 'required|max:225',
@@ -46,19 +52,17 @@ public function registrasi_proses(Request $request){
         ]);
 
         // Buat user baru
-        $data = User::create([
+        User::create([
             'name' => $request->name,
-            'level' => 'user',
             'email' => $request->email,
             'password' => hash::make($request->password),
         ]);
 
-            return redirect()->route('dashboard');
-            return redirect()->route('registrasi')->with('failed', 'email atau password salah');
+            return redirect()->route('index');
     }
 
     public function logout(){
         auth::logout();
-     return redirect()->route('login')->with('success', 'kamu berhasil logout');   
+    return redirect()->route('login')->with('success', 'kamu berhasil logout');   
     }
 }

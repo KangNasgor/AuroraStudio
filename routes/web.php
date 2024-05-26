@@ -14,10 +14,16 @@ use App\Http\Controllers\SessionController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+Route::get('/example', function () {
+    return view('example');
+});
 Route::get('/login', function () {
     return view('login');
 });
-
+Route::get('/', function (){
+    return redirect('/login');
+});
 Route::controller(BookingController::class)->group(function () {
     Route::get('/infopesanan','infopesanan')->name('infopesanan.index');
     Route::get('/formbooking','form')->name('form.index');
@@ -34,10 +40,24 @@ Route::get('/account', function () {
 });
 Route::get('/example', function () {
     return view('example');
-});
-//loggin proses//
+})->name('example');
+// login proses//
 Route::get('/sesi', [SessionController::class, 'index'])->name('sesi');
-Route::post('/sesi/login', [SessionController::class, 'login'])->name('login.proses');
+
+Route::post('/sesi/login', [SessionController::class, 'login'])->name('sesi/proses');
+
+Route::post('/login', [SessionController::class, 'login'])->name('login');
 //register proses//
 Route::get('/registrasi', [SessionController::class, 'registrasi'])->name('registrasi');
-Route::post('/registrasi.proses', [SessionController::class, 'registrasi_proses'])->name('registrasi.proses');
+Route::post('/proses', [SessionController::class, 'proses'])->name('proses');
+
+Route::get('/index', function () {
+    return view('sesi/index');
+})->name('index');
+
+
+
+
+
+
+
