@@ -18,7 +18,5 @@ protected $fillable = [
 'tempat',
 'tanggal',
 'jam',
-'created_at',
-'updated_at',
 ];
 }
