@@ -51,9 +51,9 @@ Route::post('/login', [SessionController::class, 'login'])->name('login');
 Route::get('/registrasi', [SessionController::class, 'registrasi'])->name('registrasi');
 Route::post('/proses', [SessionController::class, 'proses'])->name('proses');
 
-Route::get('/index', function () {
-    return view('sesi/index');
-})->name('index');
+Route::get('/login', function () {
+    return view('sesi/login');
+})->name('login');
 
 
 
