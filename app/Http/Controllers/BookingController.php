@@ -42,6 +42,7 @@ class BookingController extends Controller
         'tanggal'          =>$request->tanggal,
         'jam'          =>$request->jam,
         'created_at'             =>NOW()
+    
     ]);
 
     return redirect()->route('infopesanan.index')->with('success', 'Data Berhasil Ditambah!');
