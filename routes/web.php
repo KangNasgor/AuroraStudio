@@ -52,7 +52,7 @@ Route::get('/registrasi', [SessionController::class, 'registrasi'])->name('regis
 Route::post('/proses', [SessionController::class, 'proses'])->name('proses');
 
 Route::get('/login', function () {
-    return view('sesi/login');
+    return view('sesi/index');
 })->name('login');
 
 

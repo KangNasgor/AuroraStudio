@@ -44,25 +44,26 @@ public function registrasi(){
     return view('auth.registrasi');
 }
 public function proses(Request $request){
-        // Validasi input
-        $request->validate([
-            'name' => 'required|max:225',
-            'email' => 'required|email|unique:users,email',
-            'password' => 'required',
-        ]);
+       // dd($request->all());
+       $request->validate([
+        'name' => 'required',
+        'email' => 'required|email|unique:users,email',
+        'password' => 'required|min:6',
+    ]);
 
-        // Buat user baru
-        User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => hash::make($request->password),
-        ]);
+    // Create a new user
+    $user = User::create([
+        'name' => $request->name,
+        'email' => $request->email,
+        'password' => Hash::make($request->password),
+        'active' => true,
+    ]);
+        return redirect('login')->with('success', 'Registration successful, please check your phone for verification.');
+}
+public function logout(Request $request) {
+    $request->session()->flush();
 
-            return redirect()->route('index');
-    }
+    return redirect()->route('login');
+}
 
-    public function logout(){
-        auth::logout();
-    return redirect()->route('login')->with('success', 'kamu berhasil logout');   
-    }
 }
