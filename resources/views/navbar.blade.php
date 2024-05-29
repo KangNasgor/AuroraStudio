@@ -6,13 +6,40 @@
   <title>aurora</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+<style>
+  body {
+  background-image: url("{{asset('img/background.jpeg')}}");
+  background-size: cover;
+  background-attachment: fixed;
+  }
+
+  .navbar-custom {
+    background: linear-gradient(70deg, rgb(135,206, 250) 20%, rgb(0,191,255));
+  }
+
+  .navbar-brand img {
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .navbar-brand-text{
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 10px
+  }
+
+  .nav-link {
+    font-size: 20px;
+  }
   <style>
   body {
   background-image: url("{{asset('publicimage/background.jpeg')}}");
   background-size: cover;
   background-attachment: fixed;
   }
-  
+
   .navbar-custom {
     background: linear-gradient(70deg, rgb(135,206, 250) 20%, rgb(0,191,255));
   }
