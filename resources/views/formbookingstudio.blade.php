@@ -3,7 +3,7 @@
 @section('content')
 <style>
     body{
-        background-image: url('{{ asset('publicimage/bg3.jpg')}}');
+        background-image: url('{{ asset('img/bg3.jpg')}}');
         background-size: cover;
 
     }
@@ -14,56 +14,56 @@
             <div class="card shadow">
                 <div class="card-body">
                     <h2 class="card-title text-center mb-4">Booking Aurora Photo Studio</h2>
-                    <form>
+                    <form action="{{ route('form.store') }}" method="POST">
+                    @csrf
+                    @method('POST')
                         <div class="mb-3">
                             <label for="nama" class="form-label">Nama</label>
-                            <input type="text" class="form-control" id="nama" placeholder="Nama">
+                            <input type="text" class="form-control" id="nama" placeholder="Nama" name="nama">
                         </div>
                         <div class="mb-3">
                             <label for="nomorWA" class="form-label">Nomor WA aktif</label>
-                            <input type="number" class="form-control" id="nomorWA" placeholder="Enter phone number">
+                            <input type="number" class="form-control" id="nomorWA" placeholder="Enter phone number" name="nomor_wa">
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                            <input type="email" class="form-control" id="email" placeholder="name@example.com" name="email">
                         </div>
 
                         <div class="mb-3">
                             <label for="selectPaket" class="form-label">Pilihan Paket</label>
-                            <select class="form-select" id="selectPaket">
+                            <select class="form-select" id="selectPaket" name="paket">
                                 <option value="">Pilih Paket</option>
-                                <option value="paket1">Wisuda</option>
-                                <option value="paket1">Pre-Wedd</option>
-                                <option value="paket1">PasFoto</option>
-                                <option value="paket2">Maternity</option>
-                                <option value="paket3">Photoshoot</option>
-                                <option value="paket4">Personal</option>
-
+                                <option value="Wisuda">Wisuda</option>
+                                <option value="Pre-Wedd">Pre-Wedd</option>
+                                <option value="PasFoto">Maternity</option>
+                                <option value="Photoshoot">Photoshoot</option>
+                                <option value="Personal">Personal</option>
                             </select>
                         </div>
 
                         <div class="mb-3">
                             <label for="selectTempat" class="form-label">Tempat</label>
-                            <select class="form-select" id="selectTempat" onchange="toggleLokasi()">
+                            <select class="form-select" id="selectTempat" onchange="toggleLokasi()" name="tempat">
                                 <option value="">Pilih Tempat</option>
-                                <option value="indor">Indoor (Aurora Studio)</option>
-                                <option value="outdor">Outdoor</option>
+                                <option value="Indoor">Indoor (Aurora Studio)</option>
+                                <option value="Outdoor">Outdoor</option>
                             </select>
                         </div>
 
                         <div class="mb-3" id="lokasiContainer">
                             <label for="lokasi" class="form-label">Lokasi</label>
-                            <input type="text" class="form-control" id="lokasi" placeholder="Lokasi">
+                            <input type="text" class="form-control" id="lokasi" placeholder="Lokasi" name="lokasi">
                         </div>
 
                         <div class="row">
                             <div class="col-md-6 mb-3">
                                 <label for="hariTanggal" class="form-label">Hari dan Tanggal</label>
-                                <input type="date" class="form-control" id="hariTanggal">
+                                <input type="date" class="form-control" id="hariTanggal" name="tanggal">
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label for="jamBooking" class="form-label">Jam Booking</label>
-                                <input type="time" class="form-control" id="jamBooking">
+                                <input type="time" class="form-control" id="jamBooking" name="jam">
                             </div>
                         </div>
                         <div class="text-center">
@@ -81,7 +81,7 @@
         var selectTempat = document.getElementById('selectTempat');
         var lokasiContainer = document.getElementById('lokasiContainer');
 
-        if (selectTempat.value === 'outdor') {
+        if (selectTempat.value === 'Outdoor') {
             lokasiContainer.style.display = 'block';
         } else {
             lokasiContainer.style.display = 'none';

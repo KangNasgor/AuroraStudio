@@ -33,13 +33,41 @@
   .nav-link {
     font-size: 20px;
   }
+  <style>
+  body {
+  background-image: url("{{asset('publicimage/background.jpeg')}}");
+  background-size: cover;
+  background-attachment: fixed;
+  }
+
+  .navbar-custom {
+    background: linear-gradient(70deg, rgb(135,206, 250) 20%, rgb(0,191,255));
+  }
+
+  .navbar-brand img {
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .navbar-brand-text{
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 10px
+  }
+
+  .nav-link {
+    font-size: 20px;
+  }
 </style>
+</head>
+
 
 <body>
   <nav class="navbar sticky-top navbar-expand-lg navbar-dark navbar-custom">
       <div class="container-fluid">
           <a class="navbar-brand" href="#">
-            <img src="{{asset('img/background.jpeg')}}"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    img/aurorastudio.jpg') }}" alt="Logo">
+            <img src="{{ asset('img/aurorastudio.jpg') }}" alt="Logo">
             <span class="navbar-brand-text">Aurora Photo Studio</span>
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
