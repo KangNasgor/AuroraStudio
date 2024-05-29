@@ -41,7 +41,7 @@ public function login(Request $request){
 }
 }
 public function registrasi(){
-    return view('auth.registrasi');
+    return view('auth/registrasi');
 }
 public function proses(Request $request){
        // dd($request->all());

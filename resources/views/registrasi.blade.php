@@ -32,13 +32,6 @@
             <h2 class="mb-4">Register</h2>
             <form action="{{ route('proses') }}" class="form" method="POST" autocomplete="off">
                 @csrf
-                <p class="username" style="text-align:left;">
-                  Username
-                    <input type="text" id="username" placeholder="username" class="mb-1">
-                    @error('username')
-                         <small>{{ $message }}</small>
-                    @enderror
-                </p>
                 <p class="email">
                     Email
                     <input type="text" id="email" placeholder="Email" class="mb-2" style="margin-bottom: 10px;">
@@ -46,6 +39,14 @@
                 @error('email')
                          <small>{{ $message }}</small>
                     @enderror
+                    <p class="username" style="text-align:left;">
+                  Username
+                    <input type="text" id="username" placeholder="username" class="mb-1">
+                    </p>
+                    @error('username')
+                         <small>{{ $message }}</small>
+                    @enderror
+    
                 <p class="password">
                     Password
                     <input type="password" id="password" placeholder="Password" class="mb-2" style="margin-bottom: 10px;">
