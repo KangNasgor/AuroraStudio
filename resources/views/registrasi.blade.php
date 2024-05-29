@@ -1,4 +1,4 @@
-@extends('layout/layout')
+@extends('navbar')
 
 @section('content')
 <!doctype html>
@@ -57,7 +57,7 @@
                  <input type="submit" value="registrasi" name="registrasi" class="login mb-3">
 
                 <div class="forgot-password mb-4" style="text-decoration: none;">
-                <a href="login" ><B>kembali</B></a>
+                <a href="{{ route('login') }}" ><B>kembali</B></a>
             </div>
         </div>
             </form>
