@@ -56,14 +56,12 @@ public function proses(Request $request){
         'name' => $request->name,
         'email' => $request->email,
         'password' => Hash::make($request->password),
-        'active' => true,
     ]);
         return redirect('login')->with('success', 'Registration successful, please check your phone for verification.');
 }
-public function logout(Request $request) {
-    $request->session()->flush();
-
-    return redirect()->route('login');
-}
-
+public function logout()
+    {
+        Auth::logout();
+        return redirect()->route('login');
+    }
 }
