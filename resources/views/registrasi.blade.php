@@ -30,15 +30,8 @@
             </div>
         <div class="login-container col-6 p-3 shadow p-3 mb-5 bg-body-tertiary rounded">
             <h2 class="mb-4">Register</h2>
-            <form action="{{ route('proses') }}" class="form" method="POST">
+            <form action="{{ route('proses') }}" class="form" method="POST" autocomplete="off">
                 @csrf
-                <p class="username" style="text-align:left;">
-                  Username
-                    <input type="text" id="username" placeholder="username" class="mb-1">
-                    @error('username')
-                         <small>{{ $message }}</small>
-                    @enderror
-                </p>
                 <p class="email">
                     Email
                     <input type="text" id="email" placeholder="Email" class="mb-2" style="margin-bottom: 10px;">
@@ -46,6 +39,14 @@
                 @error('email')
                          <small>{{ $message }}</small>
                     @enderror
+                    <p class="username" style="text-align:left;">
+                  Username
+                    <input type="text" id="username" placeholder="username" class="mb-1">
+                    </p>
+                    @error('username')
+                         <small>{{ $message }}</small>
+                    @enderror
+    
                 <p class="password">
                     Password
                     <input type="password" id="password" placeholder="Password" class="mb-2" style="margin-bottom: 10px;">
@@ -55,9 +56,7 @@
                     @enderror
                 <br>
                  <input type="submit" value="registrasi" name="registrasi" class="login mb-3">
-
                 <div class="forgot-password mb-4" style="text-decoration: none;">
-                <a href="{{ route('login') }}" ><B>kembali</B></a>
             </div>
         </div>
             </form>

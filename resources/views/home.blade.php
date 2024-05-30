@@ -45,31 +45,31 @@
     </div>
     <div class="carousel-item">
     <div class="row text-center justify-content-center ">
-        <div class="card g-col-4  mx-4 my-5" style="width: 16rem;">
-            <img src="{{asset('publicimage/card4.jpg')}}" class="card-img-top my-3 col-sm-4"  alt="...">
+        <div class="card g-col-4  mx-4 my-3" style="width: 16rem; height: 20rem;">
+            <img src="{{asset('publicimage/card4.jpg')}}" class="card-img-top my-3 col-sm-2" style="height: 287px;"  alt="...">
         </div>
 
-        <div class="card g-col-4 mx-4 my-5" style="width: 16rem;">
-            <img src="{{asset('publicimage/card5.jpg')}}" class="card-img-top my-3" alt="...">
+        <div class="card g-col-4  mx-4 my-3" style="width: 16rem; height: 20rem;">
+            <img src="{{asset('publicimage/card5.jpg')}}" class="card-img-top my-3 col-sm-2" style="height: 287px;"  alt="...">
         </div>
 
-        <div class="card g-col-4 mx-4 my-5" style="width: 16rem;">
-            <img src="{{asset('publicimage/card6.jpg')}}" class="card-img-top my-3" alt="...">
+        <div class="card g-col-4  mx-4 my-3" style="width: 16rem; height: 20rem;">
+            <img src="{{asset('publicimage/card6.jpg')}}" class="card-img-top my-3 col-sm-2" style="height: 287px;"  alt="...">
         </div>
         </div>
     </div>
     <div class="carousel-item">
     <div class="row text-center justify-content-center ">
-        <div class="card g-col-4  mx-4 my-5" style="width: 16rem;">
-            <img src="{{asset('publicimage/card7.jpg')}}" class="card-img-top my-3 col-sm-4"  alt="...">
+         <div class="card g-col-4  mx-4 my-3" style="width: 16rem; height: 20rem;">
+            <img src="{{asset('publicimage/card7.jpg')}}" class="card-img-top my-3 col-sm-2" style="height: 287px;"  alt="...">
         </div>
 
-        <div class="card g-col-4 mx-4 my-5" style="width: 16rem;">
-            <img src="{{asset('publicimage/card8.jpg')}}" class="card-img-top my-3" alt="...">
+        <div class="card g-col-4  mx-4 my-3" style="width: 16rem; height: 20rem;">
+            <img src="{{asset('publicimage/card8.jpg')}}" class="card-img-top my-3 col-sm-2" style="height: 287px;"  alt="...">
         </div>
 
-        <div class="card g-col-4 mx-4 my-5" style="width: 16rem;">
-            <img src="{{asset('publicimage/card9.jpg')}}" class="card-img-top my-3" alt="...">
+        <div class="card g-col-4  mx-4 my-3" style="width: 16rem; height: 20rem;">
+            <img src="{{asset('publicimage/card9.jpg')}}" class="card-img-top my-3 col-sm-2" style="height: 287px;"  alt="...">
         </div>
         </div>
     </div>
@@ -86,4 +86,4 @@
 </div>
 
 <center><a href="/login" class="btn btn-primary">Login To Booking</a></center>
-@endsection
+ @endsection

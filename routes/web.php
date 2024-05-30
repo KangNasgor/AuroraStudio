@@ -38,9 +38,9 @@ Route::get('/booking', function () {
 Route::get('/account', function () {
     return view('account');
 });
-Route::get('/example', function () {
-    return view('example');
-})->name('example');
+Route::get('/home', function () {
+    return view('home');
+})->name('home');
 // login proses//
 Route::get('/sesi', [SessionController::class, 'index'])->name('sesi');
 
@@ -51,7 +51,8 @@ Route::post('/login', [SessionController::class, 'login'])->name('login');
 Route::get('/registrasi', [SessionController::class, 'registrasi'])->name('registrasi');
 Route::post('/proses', [SessionController::class, 'proses'])->name('proses');
 //logout proses//
-Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+Route::post('/logout', [SessionController::class, 'logout'])->name('logout');
+Route::get('/register', [SessionController::class, 'showRegisterForm'])->name('register');
 
 Route::get('/login', function () {
     return view('sesi/index');
