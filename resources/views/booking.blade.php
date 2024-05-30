@@ -28,7 +28,7 @@
       <br>Wisudawan + keluarga
       <br>20 edit foto
       <br>All Files original + edited via google drive</p>
-      <a href="#" class="btn btn-primary">Booking</a>
+      <a href="/formbooking" class="btn btn-primary">Booking</a>
     </div>
   </div>
 
@@ -42,7 +42,7 @@
       <br>10 edit foto per orang
       <br>All Files original + edited via google drive
       </p>
-      <a href="#" class="btn btn-primary">Booking</a>
+      <a href="/formbooking" class="btn btn-primary">Booking</a>
     </div>
   </div>
 
@@ -56,7 +56,7 @@
       <br>10 edit foto per orang
       <br>All Files original + edited via google drive
       </p>
-      <a href="#" class="btn btn-primary">Booking</a>
+      <a href="/formbooking" class="btn btn-primary">Booking</a>
     </div>
   </div>
 
@@ -71,7 +71,7 @@
       <br>1 file foto original
       <br>All file via google drive
       </p>
-      <a href="#" class="btn btn-primary">Booking</a>
+      <a href="/formbooking" class="btn btn-primary">Booking</a>
     </div>
   </div>
 
@@ -88,7 +88,7 @@
       <br>2 foto cetak + frame 12R
       <br>All file via google drive
       </p>
-      <a href="#" class="btn btn-primary">Booking</a>
+      <a href="/formbooking" class="btn btn-primary">Booking</a>
     </div>
   </div>
 
@@ -105,7 +105,7 @@
       <br>20 foto edit
       <br>All file via google drive
       </p>
-      <a href="#" class="btn btn-primary">Booking</a>
+      <a href="/formbooking" class="btn btn-primary">Booking</a>
     </div>
   </div>
 
@@ -122,7 +122,7 @@
       <br>20 foto edit
       <br>All file via google drive
       </p>
-      <a href="#" class="btn btn-primary">Booking</a>
+      <a href="/formbooking" class="btn btn-primary">Booking</a>
     </div>
   </div>
 
@@ -139,7 +139,7 @@
       <br>20 foto edit
       <br>All file via google drive
       </p>
-      <a href="#" class="btn btn-primary">Booking</a>
+      <a href="/formbooking" class="btn btn-primary">Booking</a>
     </div>
   </div>
 </div>
