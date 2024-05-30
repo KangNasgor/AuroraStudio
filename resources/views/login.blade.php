@@ -16,6 +16,14 @@
         .login-container{
             width:12cm;
         }
+        .logo{
+            width:auto;
+            height:10cm;
+        }
+        .p-3{
+            background-color:white;
+
+        }
     </style>
 </head>
 <body>
@@ -30,7 +38,6 @@
             <div class="login-container col-6 p-3 shadow p-3 mb-5 bg-body-tertiary rounded" >
                 <form action="{{ route('login') }}" class="form" method="POST" autocomplete="off">
                     @csrf
-                    @method('POST')
                     <h2 class="mb-4">Login</h2>
                     <p class="email">
                         Email
