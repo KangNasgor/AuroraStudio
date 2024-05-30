@@ -95,7 +95,7 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
         <div class="container-fluid">
-        <a class="navbar-brand">Aurora Studio</a>
+        <a class="navbar-brand">Aurora Photo Studio</a>
         </div>
       </nav>
       <br>

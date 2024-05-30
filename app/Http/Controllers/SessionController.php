@@ -62,6 +62,6 @@ public function proses(Request $request){
 public function logout()
     {
         Auth::logout();
-        return redirect()->route('login');
+        return redirect()->route('registrasi'); // Mengarahkan ke halaman register setelah logout
     }
 }
