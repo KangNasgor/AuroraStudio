@@ -38,9 +38,9 @@ Route::get('/booking', function () {
 Route::get('/account', function () {
     return view('account');
 });
-Route::get('/example', function () {
-    return view('example');
-})->name('example');
+Route::get('/home', function () {
+    return view('home');
+})->name('home');
 // login proses//
 Route::get('/sesi', [SessionController::class, 'index'])->name('sesi');
 
