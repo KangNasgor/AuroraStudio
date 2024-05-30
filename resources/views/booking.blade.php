@@ -6,12 +6,12 @@
   .card {
   color: white;
   background: #2b435772;
-  transition: transform 0.3s ease, box-shadow 0.5s ease; 
+  transition: transform 0.3s ease, box-shadow 0.5s ease;
 }
 
 .card:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); 
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 </style>
 
@@ -141,8 +141,7 @@
       </p>
       <a href="/formbooking" class="btn btn-primary">Booking</a>
     </div>
-  </div>
+ </div>
 </div>
-
 
 @endsection

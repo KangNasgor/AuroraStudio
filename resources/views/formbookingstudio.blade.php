@@ -3,7 +3,7 @@
 @section('content')
 <style>
     body{
-        background-image: url('{{ asset('img/bg3.jpg')}}');
+        background-image: url('{{ asset('img/background.jpeg')}}');
         background-size: cover;
 
     }
@@ -13,7 +13,7 @@
         <div class="col-lg-8">
             <div class="card shadow">
                 <div class="card-body">
-                    <h2 class="card-title text-center mb-4">Booking Aurora Photo Studio</h2>
+                    <h2 class="card-title text-center mb-4">Booking Aurora Photostudio</h2>
                     <form action="{{ route('form.store') }}" method="POST">
                     @csrf
                     @method('POST')
@@ -46,7 +46,7 @@
                             <label for="selectTempat" class="form-label">Tempat</label>
                             <select class="form-select" id="selectTempat" onchange="toggleLokasi()" name="tempat">
                                 <option value="">Pilih Tempat</option>
-                                <option value="Indoor">Indoor (Aurora Studio)</option>
+                                <option value="Indoor">Indoor (Aurora Photostudio)</option>
                                 <option value="Outdoor">Outdoor</option>
                             </select>
                         </div>

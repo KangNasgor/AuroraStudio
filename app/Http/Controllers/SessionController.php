@@ -8,12 +8,12 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
 
-                                                                                                        
+
 class SessionController extends Controller
 {
 public function index(){
     return view('sesi/index');
-}  
+}
 public function login(Request $request){
     $user = User::where('email', '=', $request->email)->first();
     if(!$user){

@@ -39,9 +39,9 @@
                 @error('email')
                          <small>{{ $message }}</small>
                     @enderror
-                    <p class="username" style="text-align:left;">
+                    <p class="name" style="text-align:left;">
                   Username
-                    <input type="text" id="username" placeholder="username" class="mb-1">
+                    <input type="text" id="name" placeholder="username" class="mb-1">
                     </p>
                     @error('username')
                          <small>{{ $message }}</small>

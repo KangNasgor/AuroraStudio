@@ -17,6 +17,10 @@
         transform: scale(1.05);
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        background-color: black;
+    }
 
 
 </style>
