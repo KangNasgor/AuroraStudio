@@ -48,7 +48,7 @@
                     @enderror
                     <br>
                     <br>
-                    <input type="submit" value="Login" name="login" class="login mb-3">
+                    <input type="submit" href="/booking" value="Login" name="login" class="login mb-3">
                     <div class="forgot-password mb-4" style="text-decoration: none;">
                         <a href="{{route('registrasi')}}"><b>Register</b></a>
                     </div>
