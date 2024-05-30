@@ -66,7 +66,7 @@
 <body>
   <nav class="navbar sticky-top navbar-expand-lg navbar-dark navbar-custom">
       <div class="container-fluid">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="/home">
             <img src="{{ asset('img/aurorastudio.jpg') }}" alt="Logo">
             <span class="navbar-brand-text">Aurora Photo Studio</span>
           </a>
