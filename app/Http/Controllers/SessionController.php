@@ -30,7 +30,7 @@ public function login(Request $request){
         } else {
             if($user->password === $request->password){
                 Auth::login($user);
-                return redirect()->route('example');
+                return redirect()->route('home');
             }
             else{
                 return redirect()->back();

@@ -77,7 +77,7 @@
               <ul class="navbar-nav ms-auto">
                   <li class="nav-item"><a class="nav-link" href="#">Booking</a></li>
                   <li class="nav-item"><a class="nav-link" href="#">Details</a></li>
-                  <li class="nav-item"><a class="nav-link" href="/registrasi">Profil</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Account</a></li>
               </ul>
           </div>
       </div>
