@@ -48,15 +48,15 @@ Route::post('/sesi/login', [SessionController::class, 'login'])->name('sesi/pros
 
 Route::post('/login', [SessionController::class, 'login'])->name('login');
 //register proses//
-Route::get('/registrasi', [SessionController::class, 'registrasi'])->name('registrasi');
+Route::get('registrasi', [SessionController::class, 'registrasi'])->name('registrasi');
 Route::post('/proses', [SessionController::class, 'proses'])->name('proses');
 //logout proses//
 Route::post('/logout', [SessionController::class, 'logout'])->name('logout');
 Route::get('/register', [SessionController::class, 'showRegisterForm'])->name('register');
 
-Route::get('/login', function () {
-    return view('sesi/index');
-})->name('login');
+// Route::get('/login', function () {
+//     return view('sesi/index');
+// })->name('login');
 
 
 
