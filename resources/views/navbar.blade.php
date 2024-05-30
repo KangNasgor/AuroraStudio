@@ -75,15 +75,13 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav ms-auto">
-                  <li class="nav-item"><a class="nav-link" href="#">Booking</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#">Details</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#">Profil</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/booking">Booking</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/infopesanan">Details</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/profil">Profil</a></li>
               </ul>
           </div>
       </div>
   </nav>
-
 @yield('content')
-
 </body>
 </html>
