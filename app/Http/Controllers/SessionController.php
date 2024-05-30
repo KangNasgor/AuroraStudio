@@ -41,7 +41,7 @@ public function login(Request $request){
 }
 }
 public function registrasi(){
-    return view('auth.registrasi');
+    return view('auth/registrasi');
 }
 public function proses(Request $request){
        // dd($request->all());
@@ -62,6 +62,6 @@ public function proses(Request $request){
 public function logout()
     {
         Auth::logout();
-        return redirect()->route('login');
+        return redirect()->route('registrasi'); // Mengarahkan ke halaman register setelah logout
     }
 }
