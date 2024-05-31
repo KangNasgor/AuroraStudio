@@ -52,16 +52,16 @@
                         @csrf
                         <h2 class="login-title mb-4">Registrasi</h2>
                         <div class="mb-3 d-flex align-items-center">
-                            <label for="name" class="form-label mb-0 me-3">Username</label>
-                            <input type="text" id="name" name="name" placeholder="Username" class="form-control ms-auto">
-                            @error('name')
+                            <label for="email" class="form-label mb-0 me-3 ms-1">Email</label>
+                            <input type="text" id="email" name="email" placeholder="Email" class="form-control ms-auto">
+                            @error('email')
                                 <small class="text-danger">{{ $message }}</small>
                             @enderror
                         </div>
                         <div class="mb-3 d-flex align-items-center">
-                            <label for="email" class="form-label mb-0 me-3 ms-1">Email</label>
-                            <input type="text" id="email" name="email" placeholder="Email" class="form-control ms-auto">
-                            @error('email')
+                            <label for="name" class="form-label mb-0 me-3">Username</label>
+                            <input type="text" id="name" name="name" placeholder="Username" class="form-control ms-auto">
+                            @error('name')
                                 <small class="text-danger">{{ $message }}</small>
                             @enderror
                         </div>
