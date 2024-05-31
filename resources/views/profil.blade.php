@@ -3,8 +3,7 @@
 @section('content')
 <style>
 .gradient-custom {
-/* fallback for old browsers */
-background: #f6d365;
+background: #2b435772;
 }
 .card {
     min-height: 200px; 
@@ -21,8 +20,8 @@ background: #f6d365;
               style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
               <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
                 alt="Avatar" class="img-fluid my-5" style="width: 80px;" />
-              <h5>Marie Horwitz</h5>
-              <p>Web Designer</p>
+              <h5>Kim Taehyung</h5>
+              <p>Programer</p>
               <i class="far fa-edit mb-5"></i>
             </div>
             <div class="col-md-8">

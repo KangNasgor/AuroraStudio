@@ -66,7 +66,7 @@
 <body>
   <nav class="navbar sticky-top navbar-expand-lg navbar-dark navbar-custom">
       <div class="container-fluid">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="/home">
             <img src="{{ asset('img/aurorastudio.jpg') }}" alt="Logo">
             <span class="navbar-brand-text">Aurora Photo Studio</span>
           </a>
@@ -75,15 +75,13 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav ms-auto">
-                  <li class="nav-item"><a class="nav-link" href="#">Booking</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#">Details</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#">Account</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/booking">Booking</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/infopesanan">Details</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/profil">Profil</a></li>
               </ul>
           </div>
       </div>
   </nav>
-
 @yield('content')
-
 </body>
 </html>
