@@ -1,8 +1,6 @@
 @extends('navbar')
 
 @section('content')
-<!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,7 +36,7 @@
         }
         .btn-register {
             width: 25%;
-            min-width: 150px; /* Ensure the button doesn't get too small on small screens */
+            min-width: 150px; 
         }
     </style>
 </head>
