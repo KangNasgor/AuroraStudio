@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers; 
+namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
@@ -10,13 +10,13 @@ use App\Models\Bookings;
 class BookingController extends Controller
 {
     public function index(){
-        
+
         return view();
     }
 
     public function form(): View
     {
-        return view('formbookingstudio');
+        return view('formbooking');
     }
 
     public function formStore(Request $request)
@@ -42,7 +42,7 @@ class BookingController extends Controller
         'tanggal'          =>$request->tanggal,
         'jam'          =>$request->jam,
         'created_at'             =>NOW()
-    
+
     ]);
 
     return redirect()->route('infopesanan.index')->with('success', 'Data Berhasil Ditambah!');
