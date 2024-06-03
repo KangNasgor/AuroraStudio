@@ -53,10 +53,6 @@ Route::get('registrasi', [SessionController::class, 'registrasi'])->name('regist
 Route::post('/proses', [SessionController::class, 'proses'])->name('proses');
 //logout proses//
 Route::post('/logout', [SessionController::class, 'logout'])->name('logout');
-Route::get('/register', [SessionController::class, 'showRegisterForm'])->name('register');
-
-// Route::get('/login', function () {
-//     return view('sesi/index');
 // })->name('login');
 
 

@@ -52,9 +52,11 @@ public function proses(Request $request){
     ]);
         return redirect('login')->with('success', 'Registration successful, please check your phone for verification.');
 }
-public function logout()
+public function logout(Request $request)
     {
         Auth::logout();
-        return redirect()->route('registrasi'); // Mengarahkan ke halaman register setelah logout
+        // Redirect ke halaman login setelah logout
+        return redirect()->route('registrasi');
     }
 }
+

@@ -46,6 +46,10 @@ background: #2b435772;
               </div>
             </div>
           </div>
+          <form action="{{ route('logout') }}" method="POST">
+                @csrf
+                <button type="submit" class="btn btn-danger">Logout</button>
+            </form>
         </div>
       </div>
     </div>
