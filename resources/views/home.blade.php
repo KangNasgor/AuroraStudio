@@ -94,5 +94,7 @@
     </button>
 </div>
 
-<center><a href="/login" class="btn btn-primary">Login To Booking</a></center>
+@guest
+    <center><a href="/login" class="btn btn-primary mt-4">Login untuk Booking</a></center>
+@endguest
  @endsection
