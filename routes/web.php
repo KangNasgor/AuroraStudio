@@ -24,6 +24,8 @@ Route::get('/login', function () {
 Route::get('/', function (){
     return redirect('/login');
 });
+
+//info pesanan dan formbooking proses// 
 Route::controller(BookingController::class)->group(function () {
     Route::get('/infopesanan','infopesanan')->name('infopesanan.index');
     Route::get('/formbooking','form')->name('form.index');

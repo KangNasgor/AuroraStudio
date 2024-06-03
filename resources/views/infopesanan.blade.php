@@ -5,7 +5,7 @@
     .textinfopesanan {
         color: black;
         text-align: center;
-        margin-top: 2%;
+        margin-top: 18px;
     }
 
     .tableinformation {
@@ -51,7 +51,6 @@
     <div class="textinfopesanan">
         <h1>INFO PESANAN</h1>
     </div>
-    <br>
     <!--bagian dalam infopesanan-->
     <div class="row justify-content-center">
         <div class="card text-center col-md-8" style="width: 50rem;">
@@ -66,27 +65,31 @@
                     <tbody>
                         <tr>
                             <td>Nama</td>
-                            <td></td>
+                            <td>{{ $bookings->nama }}</td>
                         </tr>
                         <tr>
                             <td>Paket</td>
-                            <td></td>
+                            <td>{{ $bookings->paket }}</td>
                         </tr>
                         <tr>
                             <td>No Telepon</td>
-                            <td></td>
+                            <td>{{ $bookings->nomor_wa }}</td>
                         </tr>
                         <tr>
                             <td>Email</td>
-                            <td></td>
+                            <td>{{ $bookings->email }}</td>
+                        </tr>
+                        <tr>
+                            <td>Lokasi</td>
+                            <td>{{ $bookings->lokasi }}</td>
                         </tr>
                         <tr>
                             <td>Hari dan Tanggal</td>
-                            <td></td>
+                            <td>{{ $bookings->tanggal }}</td>
                         </tr>
                         <tr>
-                            <td>Bukti Transfer</td>
-                            <td><img src="..." class="img-fluid" alt="Foto Bukti Transfer"></td>
+                            <td>Waktu</td>
+                            <td>{{ $bookings->jam }}</td>
                         </tr>
                     </tbody>
                 </table>

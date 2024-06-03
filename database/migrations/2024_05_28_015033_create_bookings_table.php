@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('nama');
             $table->string('nomor_wa');
             $table->string('email');
-            $table->string('lokasi');
+            $table->string('lokasi')->nullable();
             $table->enum('paket', ['Wisuda', 'Pre-Wedd', 'PasFoto', 'Maternity', 'Photoshoot','Personal']);
             $table->enum('tempat', ['Indoor', 'Outdoor']);
             $table->date('tanggal');
