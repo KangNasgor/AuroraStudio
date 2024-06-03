@@ -14,9 +14,6 @@ class Regis extends Authenticatable
     ];
 
     // Kolom yang harus disembunyikan dalam array
-    protected $hidden = [
-        'password', 'remember_token',
-    ];
 
     // Tipe casting atribut
     protected $casts = [
