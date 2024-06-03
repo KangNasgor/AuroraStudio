@@ -40,7 +40,7 @@ Route::get('/booking', function () {
 Route::get('/profil', function () {
     return view('profil');
 });
-Route::get('/home', function () {
+Route::get('/', function () {
     return view('home');
 })->name('home');
 // login proses//
