@@ -11,7 +11,7 @@ class SessionController extends Controller
 {
     public function index()
     {
-        return view('layout/login');
+        return view('login');
     }
 
     public function login(Request $request)
@@ -28,6 +28,9 @@ class SessionController extends Controller
             Auth::login($user);
         // Attempt to find the user by email
             return redirect()->route('home');
+        }
+        else{
+            return redirect()->route('login')->with('error', 'Email atau password salah');
         }
     }
 public function registrasi(){
