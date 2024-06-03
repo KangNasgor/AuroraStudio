@@ -21,7 +21,7 @@
         }
         .form-control {
             margin-bottom: 15px;
-        }
+        }   
         .forgot-password a {
             text-decoration: none;
             color: #000000;
