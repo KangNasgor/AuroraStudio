@@ -13,10 +13,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
             background-color: #ffffff;
-<<<<<<< HEAD
             margin: auto; /* Center the container */
-=======
->>>>>>> 91f3abc179f56ec43b3a5ac603d6dd0443ee7b7a
         }
         .login-title {
             font-size: 1.5rem;
@@ -64,16 +61,11 @@
                 </div>
             </div>
         </div>
-<<<<<<< HEAD
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-=======
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
->>>>>>> 91f3abc179f56ec43b3a5ac603d6dd0443ee7b7a
     @if($message = Session::get('failed'))
     <script>
         Swal.fire('{{ $message  }}');
