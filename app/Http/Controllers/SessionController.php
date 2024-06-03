@@ -31,6 +31,10 @@ class SessionController extends Controller
         $user->email= $request->email;
         $user->password = Hash::make($request->password); // Hash the password
         $user->save();
+        // if($user->password === $request->password){
+        //     Auth::login($user);
+        //     return redirect()->route('customer.count');
+        // }
 
         // if (!$user || Hash::check($request->password, $user->password)) {
         //     // If user doesn't exist or password is incorrect, redirect back with error
