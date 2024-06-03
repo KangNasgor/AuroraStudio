@@ -15,133 +15,141 @@
 }
 </style>
 
+@guest
+<div class="text-center">
+  <h2>Anda belum melakukan login</h2>
+  <a href="/login" class="btn btn-primary">Login</a>
+</div>
+@endguest
 
+@auth
 <div class="row text-center justify-content-center ">
-  <div class="card g-col-4  mx-4 my-4" style="width: 16rem;">
-    <img src="{{asset('publicimage/paket1grad.jpg')}}" class="card-img-top my-3 col-sm-4"  alt="...">
+  <div class="card g-col-4 mx-4 my-4" style="width: 16rem;">
+    <img src="{{ asset('publicimage/paket1grad.jpg') }}" class="card-img-top my-3 col-sm-4" alt="...">
     <div class="card-body">
       <h5 class="card-title">Paket 1 Wisudawan</h5>
-
       <p class="card-text">
         <b>Rp.300.000,00</b>
-      <br>1 jam sesi foto
-      <br>Wisudawan + keluarga
-      <br>20 edit foto
-      <br>All Files original + edited via google drive</p>
+        <br>1 jam sesi foto
+        <br>Wisudawan + keluarga
+        <br>20 edit foto
+        <br>All Files original + edited via google drive
+      </p>
       <a href="/formbooking" class="btn btn-primary">Booking</a>
     </div>
   </div>
 
   <div class="card g-col-4 mx-4 my-4" style="width: 16rem;">
-    <img src="{{asset('publicimage/paket2grad.jpg')}}" class="card-img-top my-3" alt="...">
+    <img src="{{ asset('publicimage/paket2grad.jpg') }}" class="card-img-top my-3" alt="...">
     <div class="card-body">
       <h5 class="card-title">Paket Grup 2-3 Wisudawan</h5>
       <p class="card-text">
         Price 500k
-      <br>1 jam sesi foto
-      <br>10 edit foto per orang
-      <br>All Files original + edited via google drive
+        <br>1 jam sesi foto
+        <br>10 edit foto per orang
+        <br>All Files original + edited via google drive
       </p>
       <a href="/formbooking" class="btn btn-primary">Booking</a>
     </div>
   </div>
 
   <div class="card g-col-4 mx-4 my-4" style="width: 16rem;">
-    <img src="{{asset('publicimage/paket3grad.jpg')}}" class="card-img-top my-3" alt="...">
+    <img src="{{ asset('publicimage/paket3grad.jpg') }}" class="card-img-top my-3" alt="...">
     <div class="card-body">
       <h5 class="card-title">Paket Grup 4-5 Wisudawan</h5>
       <p class="card-text">
-      Price 600k
-      <br>1 jam sesi foto
-      <br>10 edit foto per orang
-      <br>All Files original + edited via google drive
+        Price 600k
+        <br>1 jam sesi foto
+        <br>10 edit foto per orang
+        <br>All Files original + edited via google drive
       </p>
       <a href="/formbooking" class="btn btn-primary">Booking</a>
     </div>
   </div>
 
   <div class="card g-col-4 mx-4 my-4" style="width: 16rem;">
-    <img src="{{asset('publicimage/pasfoto.jpg')}}" class="card-img-top my-3" alt="...">
+    <img src="{{ asset('publicimage/pasfoto.jpg') }}" class="card-img-top my-3" alt="...">
     <div class="card-body">
       <h5 class="card-title">Pas Foto</h5>
       <p class="card-text">
-      Price 30k
-      <br>1 file foto edit
-      <br>1 file siap cetak ukuran 4x6/3x4
-      <br>1 file foto original
-      <br>All file via google drive
+        Price 30k
+        <br>1 file foto edit
+        <br>1 file siap cetak ukuran 4x6/3x4
+        <br>1 file foto original
+        <br>All file via google drive
       </p>
       <a href="/formbooking" class="btn btn-primary">Booking</a>
     </div>
   </div>
 
   <div class="card g-col-4 mx-4 my-4" style="width: 16rem;">
-    <img src="{{asset('publicimage/maternity.jpg')}}" class="card-img-top my-3" alt="...">
+    <img src="{{ asset('publicimage/maternity.jpg') }}" class="card-img-top my-3" alt="...">
     <div class="card-body">
       <h5 class="card-title">Maternity</h5>
       <p class="card-text">
-      Price 750k
-      <br>Indoor/Outdoor
-      <br>1 jam sesi foto
-      <br>Unilimited photoshoot
-      <br>20 foto edit
-      <br>2 foto cetak + frame 12R
-      <br>All file via google drive
+        Price 750k
+        <br>Indoor/Outdoor
+        <br>1 jam sesi foto
+        <br>Unlimited photoshoot
+        <br>20 foto edit
+        <br>2 foto cetak + frame 12R
+        <br>All file via google drive
       </p>
       <a href="/formbooking" class="btn btn-primary">Booking</a>
     </div>
   </div>
 
   <div class="card g-col-4 mx-4 my-4" style="width: 16rem;">
-    <img src="{{asset('publicimage/photoshoot.jpg')}}" class="card-img-top my-3" alt="...">
+    <img src="{{ asset('publicimage/photoshoot.jpg') }}" class="card-img-top my-3" alt="...">
     <div class="card-body">
       <h5 class="card-title">Photoshoot</h5>
       <p class="card-text">
-      Price 300k/1 jam
-      <br>200k/30 menit
-      <br>Sewa Studio
-      <br>Fotografer
-      <br>Unlimited photoshoot
-      <br>20 foto edit
-      <br>All file via google drive
+        Price 300k/1 jam
+        <br>200k/30 menit
+        <br>Sewa Studio
+        <br>Fotografer
+        <br>Unlimited photoshoot
+        <br>20 foto edit
+        <br>All file via google drive
       </p>
       <a href="/formbooking" class="btn btn-primary">Booking</a>
     </div>
   </div>
 
   <div class="card g-col-4 mx-4 my-4" style="width: 16rem;">
-    <img src="{{asset('publicimage/personal.jpg')}}" class="card-img-top my-3" alt="...">
+    <img src="{{ asset('publicimage/personal.jpg') }}" class="card-img-top my-3" alt="...">
     <div class="card-body">
       <h5 class="card-title">Personal</h5>
       <p class="card-text">
-      Price 300k/1 jam
-      <br>200k/30 menit
-      <br>Sewa Studio
-      <br>Fotografer
-      <br>Unlimited photoshoot
-      <br>20 foto edit
-      <br>All file via google drive
+        Price 300k/1 jam
+        <br>200k/30 menit
+        <br>Sewa Studio
+        <br>Fotografer
+        <br>Unlimited photoshoot
+        <br>20 foto edit
+        <br>All file via google drive
       </p>
       <a href="/formbooking" class="btn btn-primary">Booking</a>
     </div>
   </div>
 
   <div class="card g-col-4 mx-4 my-4" style="width: 16rem;">
-    <img src="{{asset('publicimage/grup.jpg')}}" class="card-img-top my-3" alt="...">
+    <img src="{{ asset('publicimage/grup.jpg') }}" class="card-img-top my-3" alt="...">
     <div class="card-body">
       <h5 class="card-title">Grup</h5>
       <p class="card-text">
-      Price 300k/1 jam
-      <br>200k/30 menit
-      <br>Sewa Studio
-      <br>Fotografer
-      <br>Unlimited photoshoot
-      <br>20 foto edit
-      <br>All file via google drive
+        Price 300k/1 jam
+        <br>200k/30 menit
+        <br>Sewa Studio
+        <br>Fotografer
+        <br>Unlimited photoshoot
+        <br>20 foto edit
+        <br>All file via google drive
       </p>
       <a href="/formbooking" class="btn btn-primary">Booking</a>
     </div>
- </div>
+  </div>
 </div>
+@endauth
 
 @endsection
