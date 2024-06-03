@@ -9,15 +9,14 @@ use App\Models\Bookings;
 
 class BookingController extends Controller
 {
+    public function index(){
+
+        return view();
+    }
 
     public function form(): View
     {
         return view('formbooking');
-    }
-
-    public function infopesanan(){
-        $bookings = Bookings::latest()->first();
-        return view('infopesanan', compact('bookings'));
     }
 
     public function formStore(Request $request)
@@ -30,6 +29,7 @@ class BookingController extends Controller
         'tempat' => 'required',
         'tanggal' => 'required|date',
         'jam' => 'required|date_format:H:i',
+        'lokasi' => 'required_if:tempat,Outdoor',
     ]);
 
     Bookings::create ([
@@ -49,5 +49,12 @@ class BookingController extends Controller
 }
 
 
-    
+    public function booking(){
+        return view();
+    }
+
+    public function infopesanan(){
+        $bookings = Bookings::latest()->first();
+        return view('infopesanan', compact('bookings'));
+    }
 }
