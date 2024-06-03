@@ -13,11 +13,6 @@ class User extends Authenticatable
         'name', 'email', 'password',
     ];
 
-    // Kolom yang harus disembunyikan dalam array
-    protected $hidden = [
-        'password', 'remember_token',
-    ];
-
     // Tipe casting atribut
     protected $casts = [
         'email_verified_at' => 'datetime',
