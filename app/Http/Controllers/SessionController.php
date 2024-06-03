@@ -1,45 +1,49 @@
 <?php
-
 namespace App\Http\Controllers;
+
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
-
-
 class SessionController extends Controller
 {
-public function index(){
-    return view('sesi/index');
-}
-public function login(Request $request){
-    $user = User::where('email', '=', $request->email)->first();
-    if(!$user){
-        return redirect()->back();
+    public function index()
+    {
+        return view('sesi.index');
     }
-    else{
+
+    public function login(Request $request)
+    {
+        // Validate the request input
         $validator = Validator::make($request->all(), [
-            'email' => ['required', 'string'],
-            'password' => ['required', 'string']
+            'email' => ['required', 'string', 'email'],
+            'password' => ['required', 'string', 'min:6'],
         ]);
 
         if ($validator->fails()) {
-            return redirect()->back();
-        } else {
-            if($user->password === $request->password){
-                Auth::login($user);
-                return redirect()->route('home');
-            }
-            else{
-                return redirect()->back();
-            }
+            return redirect()->back()->withErrors($validator)->withInput();
         }
-    // Auth::attempt() digunakan untuk mencoba mengotentikasi pengguna menggunakan kredensial yang diberikan (biasanya email dan password). Jika kredensial cocok dengan catatan di database, pengguna akan diautentikasi dan sesi akan dimulai.Namun, Auth::attempt() tidak mengembalikan objek pengguna yang diautentikasi. Sebaliknya, fungsi ini mengembalikan true jika autentikasi berhasil dan false jika gagal. Untuk mendapatkan objek pengguna yang diautentikasi, Anda dapat menggunakan fungsi Auth::user() setelah berhasil memanggil Auth::attempt().
 
-}
-}
+        // Attempt to find the user by email
+        $user = User::where('email', $request->email)->first(); 
+        $user->email= $request->email;
+        $user->password = Hash::make($request->password); // Hash the password
+        $user->save();
+
+        // if (!$user || Hash::check($request->password, $user->password)) {
+        //     // If user doesn't exist or password is incorrect, redirect back with error
+        //     return redirect()->back()->withErrors(['email' => 'The provided credentials do not match our records.'])->withInput();
+        // }
+
+        // Log the user in
+        Auth::login($user);
+
+        // Redirect to the home route
+        return redirect()->route('home');
+    }
+
 public function registrasi(){
     return view('registrasi');
 }
@@ -48,7 +52,7 @@ public function proses(Request $request){
        $request->validate([
         'name' => 'required',
         'email' => 'required|email|unique:users,email',
-        'password' => 'required|min:6',
+        'password' => 'required',
     ]);
 
     // Create a new user
