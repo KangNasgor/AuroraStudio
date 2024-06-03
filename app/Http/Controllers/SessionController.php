@@ -56,7 +56,7 @@ public function logout(Request $request)
     {
         Auth::logout();
         // Redirect ke halaman login setelah logout
-        return redirect()->route('registrasi');
+        return redirect()->route('login');
     }
 }
 
