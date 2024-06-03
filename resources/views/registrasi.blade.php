@@ -37,8 +37,7 @@
 
     <div class="container text-center">
         <div class="row g-4 justify-content-center">
-            <div class="col-md-6">
-                
+            <div class="col-md-6">     
                 <div class="login-container">
                     <form action="{{ route('proses') }}" method="POST">
                         @csrf
