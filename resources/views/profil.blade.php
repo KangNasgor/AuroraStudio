@@ -20,7 +20,7 @@ background: #2b435772;
               style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
               <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
                 alt="Avatar" class="img-fluid my-5" style="width: 80px;" />
-              <h5>Kim Taehyung</h5>
+              <h5>{{ $user->name }}</h5>
               <p>Programer</p>
               <i class="far fa-edit mb-5"></i>
             </div>
@@ -31,11 +31,11 @@ background: #2b435772;
                 <div class="row pt-1">
                   <div class="col-6 mb-3">
                     <h6>Email</h6>
-                    <p class="text-muted">info@example.com</p>
+                    <p class="text-muted">{{ $user->email }}</p>
                   </div>
                   <div class="col-6 mb-3">
-                    <h6>Phone</h6>
-                    <p class="text-muted">123 456 789</p>
+                    <h6>Name</h6>
+                    <p class="text-muted">{{ $user->name }}</p>
                   </div>
                 </div>
                   <div class="col-6 mb-3">

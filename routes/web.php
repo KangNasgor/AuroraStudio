@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\SessionController;
+use App\Http\Controllers\ProfilController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,9 +38,7 @@ Route::get('/booking', function () {
     return view('booking');
 });
 
-Route::get('/profil', function () {
-    return view('profil');
-});
+Route::get('/profil', [ProfilController::class, 'show'])->name('profil');
 Route::get('/', function () {
     return view('home');
 })->name('home');
