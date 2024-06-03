@@ -31,19 +31,21 @@ background: #2b435772;
                 <div class="row pt-1">
                   <div class="col-6 mb-3">
                     <h6>Email</h6>
-                    <p class="text-muted">{{ @if($user)
-                      $user->email
+                    <p class="text-muted">
+                    @if($user)
+                      {{ $user->email }}
                     @else 
-                  <p>null</p>
-                @endif }}</p>
+                      <p>null</p>
+                    @endif 
+                    </p>
                   </div>
                   <div class="col-6 mb-3">
                     <h6>Name</h6>
-                    <p class="text-muted">{{ @if($user)
-                       $user->name
+                    <p class="text-muted"> @if($user)
+                       {{ $user->name }}
                       @else
                     <p>null</p> 
-                   @endif}}</p>
+                  @endif </p>
                   </div>
                 </div>
                   <div class="col-6 mb-3">
