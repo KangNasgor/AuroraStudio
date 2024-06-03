@@ -3,13 +3,22 @@
 @section('content')
 <style>
 .gradient-custom {
-background: #2b435772;
+  background: #2b435772;
 }
 .card {
-    min-height: 200px; 
-    margin-top: -50px;
+  min-height: 200px;
+  margin-top: -50px;
 }
 </style>
+
+@guest
+<div class="text-center mt-5">
+  <h2>Anda belum melakukan login</h2>
+  <a href="/login" class="btn btn-primary">Login</a>
+</div>
+@endguest
+
+@auth
 <section class="vh-100" style="background-color: #f4f5f7;">
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
@@ -41,29 +50,31 @@ background: #2b435772;
                   </div>
                   <div class="col-6 mb-3">
                     <h6>Name</h6>
-                    <p class="text-muted"> @if($user)
-                       {{ $user->name }}
-                      @else
-                    <p>null</p> 
-                  @endif </p>
+                    <p class="text-muted">
+                    @if($user)
+                      {{ $user->name }}
+                    @else
+                      <p>null</p> 
+                    @endif
+                    </p>
                   </div>
                 </div>
-                  <div class="col-6 mb-3">
-                    <h6>Recent</h6>
-                    <p class="text-muted">2 hours</p>
-                  </div>
+                <div class="col-6 mb-3">
+                  <h6>Recent</h6>
+                  <p class="text-muted">2 hours</p>
                 </div>
               </div>
             </div>
           </div>
           <form action="{{ route('logout') }}" method="POST">
-                @csrf
-                <button type="submit" class="btn btn-danger">Logout</button>
-            </form>
+            @csrf
+            <button type="submit" class="btn btn-danger">Logout</button>
+          </form>
         </div>
       </div>
     </div>
   </div>
 </section>
+@endauth
 
 @endsection
