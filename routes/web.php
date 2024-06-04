@@ -113,7 +113,7 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 // login proses//
-Route::get('/sesi', [SessionController::class, 'index'])->name('sesi');
+Route::get('/login', [SessionController::class, 'index'])->name('login');
 
 Route::post('/sesi/login', [SessionController::class, 'login'])->name('sesi/proses');
 

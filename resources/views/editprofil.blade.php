@@ -61,7 +61,7 @@
                     </input>
                   </div>
                   
-                  <button href="profil" class="btn btn-success" role="button">simpan</button>
+                  <button href="profil" class="btn btn-success" type="submit">simpan</button>
                 </div>
               </div>
             </div>

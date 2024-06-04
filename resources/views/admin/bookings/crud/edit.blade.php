@@ -8,7 +8,7 @@
             @method('PUT')
             <div class="box justify-content-evenly">
                 <label class="form weight-bold col-5">Customer</label>
-                <select class="custom-select border border-secondary rounded-1 col-6" id="inputGroupSelect01" name="customer"">
+                <select class="custom-select border border-secondary rounded-1 col-6" id="inputGroupSelect01" name="customer">
                     @foreach ($customer as $cus)
                         <option value="{{ $cus->id }}" {{ $bookings->customer_id == $cus->id ? 'selected' : '' }}>{{$cus->name}}</option>
                     @endforeach
