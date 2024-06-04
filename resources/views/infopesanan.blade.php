@@ -48,7 +48,7 @@
         <h1>INFO PESANAN</h1>
     </div>
     <div class="row justify-content-center">
-        <div class="card text-center col-md-8" style="width: 50rem;">
+        <div class="card text-center col-md-8 mb-4" style="width: 50rem;">
             <div class="container mt-3">
                 @auth
                     @if($bookings)
