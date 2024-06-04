@@ -53,10 +53,13 @@ public function proses(Request $request){
         return redirect('login')->with('success', 'Registration successful, please check your phone for verification.');
 }
 public function logout(Request $request)
-    {
+{
+    if ($request->isMethod('post')) {
         Auth::logout();
-        // Redirect ke halaman login setelah logout
-        return redirect()->route('login');
+        return redirect('login'); 
     }
+    return redirect()->back()->withErrors('Invalid request method');
 }
+}
+
 

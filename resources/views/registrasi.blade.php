@@ -68,7 +68,7 @@
                         <button type="submit" class="btn btn-primary btn-register mt-3">Register</button>
                     </form>
                     <p class="text-muted mt-3">Already have an account?</p>
-                    <a href="{{ route('sesi') }}" class="btn btn-primary btn-login mt-2">Login</a>
+                    <a href="{{ route('login') }}" class="btn btn-primary btn-login mt-2">Login</a>
                 </div>
             </div>
         </div>

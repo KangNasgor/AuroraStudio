@@ -61,18 +61,19 @@
                     </input>
                   </div>
                   <button href="{{ route('profil.update') }}" class="btn btn-success" type="submit">simpan</button>
-                  <button href="{{ route('profil.edit') }}" class="btn btn-success" type="button">kembali</button>
+                  <button href="{{ route('profil.update') }}" class="btn btn-success" type="submit">kembali</button>
                 </div>
               </div>
             </div>
           </div>
         </div>
         <div class="d-flex justify-content-end">
-          <form action="{{ route('logout') }}" method="POST">
-              @csrf
-              <button type="submit" class="btn btn-danger">Logout</button>
-          </form>
+            <form action="{{ route('logout') }}" method="POST">
+                @csrf
+                <button type="submit" class="btn btn-danger">Logout</button>
+            </form>
         </div>
+
       </div>
     </div>
   </div>
