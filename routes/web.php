@@ -116,7 +116,7 @@ Route::get('/', function () {
 // login proses//
 Route::get('/login', [SessionController::class, 'index'])->name('login');
 
-Route::post('/sesi/login', [SessionController::class, 'login'])->name('sesi/proses');
+Route::post('/login', [SessionController::class, 'login'])->name('/proses');
 
 // Route::post('/loginpost', [SessionController::class, 'login'])->name('loginpost');
 //register proses//
