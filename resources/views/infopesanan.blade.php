@@ -80,7 +80,7 @@
                                     <td>Lokasi</td>
                                     <td>
                                         @if($bookings->tempat === 'Indoor' && empty($bookings->lokasi))
-                                            Studio Aurora Photostudio
+                                            Studio Aurora
                                         @else
                                             {{ $bookings->lokasi }}
                                         @endif
