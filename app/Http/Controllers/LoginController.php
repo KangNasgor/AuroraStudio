@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Middleware\AdminMiddleware;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use App\Http\Controllers\Controller;
@@ -11,14 +12,15 @@ use App\Models\Admin;
 use Illuminate\Validation\Rule;
 class LoginController extends Controller{
     // public function __construct(){
-    //     $this->middleware('admin');
+    //     $this->middleware(AdminMiddleware::class);
     // }
-    public function login(){
+    public function loginAdmin(){
         $users = Admin::all();
-        return view('login/login', compact('users'));
+        return view('loginadmin/login', compact('users'));
     }
     public function loginsubmit(Request $request){
         $user = Admin::where('name', '=', $request->name)->first();
+        $adminValidation = Admin::where('role', '=', 'Admin')->first();
         if(!$user){
             return redirect()->back();
         }
@@ -30,7 +32,7 @@ class LoginController extends Controller{
             if ($validator->fails()) {
                 return redirect()->back();
             } else {
-                if($user->password === $request->password){
+                if($user->password === $request->password && $adminValidation){
                     Auth::login($user);
                     return redirect()->route('customer.count');
                 }

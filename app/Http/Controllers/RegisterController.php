@@ -16,6 +16,6 @@ class RegisterController extends Controller
             'password' => $request->input('password'),
             'role' => $request->input('role'),
         ]);
-        return redirect()->route('login');
+        return redirect()->route('login.admin');
     }
 }

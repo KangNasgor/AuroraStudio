@@ -6,6 +6,8 @@ use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
+use App\Models\Admin;
 
 class AdminMiddleware
 {
@@ -16,15 +18,6 @@ class AdminMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-        // Check if the user is authenticated
-        if (Auth::check()) {
-            // Check if the authenticated user is an admin
-            if (Auth::user()->is_admin) {
-                return $next($request);
-            } else {
-                return redirect('/dashboard')->with('error', 'Access denied. You are not an admin.');
-            }
-        }
-        return redirect('/loginadmin');
+        return $next($request);
     }
 }

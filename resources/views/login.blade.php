@@ -45,7 +45,7 @@
         <div class="row justify-content-center">
             <div class="col-lg-6 col-md-8">
                 <div class="login-container">
-                    <form action="{{ route('login') }}" method="POST">
+                    <form action="{{ route('sesi/proses') }}" method="POST">
                         @csrf
                         <center><h2 class="login-title">Login</h2></center>
                         <div class="mb-3">
