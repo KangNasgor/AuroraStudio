@@ -43,24 +43,25 @@
                   <div class="col-6 mb-3">
                     <h6>Email</h6>
                     <input class="text-muted">
-                    <!-- @if($user)
+                    @if($user)
                       {{ $user->email }}
                     @else 
                       <p>null</p>
-                    @endif  -->
+                    @endif 
                     </input>
                   </div>
                   <div class="col-6 mb-3">
                     <h6>Name</h6>
                     <input class="text-muted">
-                    <!-- @if($user)
+                    @if($user)
                       {{ $user->name }}
                     @else
                       <p>null</p> 
-                    @endif -->
+                    @endif
                     </input>
                   </div>
-                  <button class="btn btn-success" role="button">simpan</button>
+                  
+                  <button href="profil" class="btn btn-success" role="button">simpan</button>
                 </div>
               </div>
             </div>
