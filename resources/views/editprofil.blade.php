@@ -37,9 +37,9 @@
                 <h6>Information</h6>
                 <hr class="mt-0 mb-4">
                 <div class="row pt-1">
-                <form action=" {{ route('profil.update') }} " method="POST">
-            @csrf
-            @method('PUT')
+                <form action=" {{ route('profil.update') }} " method="PUT">
+                 @csrf
+                 @method('PUT')
                   <div class="col-6 mb-3">
                     <h6>Email</h6>
                     <input class="text-muted"  placeholder="masukan email baru baru">
@@ -60,8 +60,7 @@
                     @endif -->
                     </input>
                   </div>
-                  
-                  <button href="profil" class="btn btn-success" type="submit">simpan</button>
+                  <button href="{{ route('profil.update') }}" class="btn btn-success" type="submit">simpan</button>
                 </div>
               </div>
             </div>

@@ -102,10 +102,13 @@ Route::controller(BookingController::class)->group(function () {
 Route::get('/booking', function () {
     return view('booking');
 });
-
+//profil//
+// Route::put('/profil', function () {
+//     return 'profil.update';
+// });
 Route::get('/profil', [ProfilController::class, 'show'])->name('profil');
 Route::get('/editprofil', [ProfilController::class, 'edit'])->name('profil.edit');
-Route::post('/profil', [ProfilController::class, 'update'])->name('profil.update');
+Route::put('/profil', [ProfilController::class, 'update'])->name('profil.update');
 
 
 

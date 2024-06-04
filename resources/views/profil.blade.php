@@ -37,6 +37,9 @@
                 <h6>Information</h6>
                 <hr class="mt-0 mb-4">
                 <div class="row pt-1">
+                <form action=" {{ route('profil.update') }} " method="POST">
+                 @csrf
+                 @method('POST')
                   <div class="col-6 mb-3">
                     <h6>Email</h6>
                     <p class="text-muted">
@@ -58,7 +61,7 @@
                     </p>
                   </div>
                 </div>
-               <a href="{{ route('profil.edit')}}" class="btn btn-success" role="button">edit</a>
+               <a href="{{ route('profil.edit') }}" class="btn btn-success" role="button">edit</a>
               </div>
             </div>
           </div>
