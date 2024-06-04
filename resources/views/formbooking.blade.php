@@ -34,11 +34,14 @@
                             <label for="selectPaket" class="form-label">Pilihan Paket</label>
                             <select class="form-select" id="selectPaket" name="paket" required>
                                 <option value="">Pilih Paket</option>
-                                <option value="Wisuda">Wisuda</option>
-                                <option value="Pre-Wedd">Pre-Wedd</option>
-                                <option value="PasFoto">Maternity</option>
+                                <option value="Paket 1 Wisudawan">Paket 1 Wisudawan</option>
+                                <option value="Paket Grup 2-3 Wisudawan">Paket Grup 2-3 Wisudawan</option>
+                                <option value="Paket Grup 4-5 Wisudawan">Paket Grup 4-5 Wisudawan</option>
+                                <option value="Pas Foto">Pas Foto</option>
+                                <option value="Maternity">Maternity</option>
                                 <option value="Photoshoot">Photoshoot</option>
                                 <option value="Personal">Personal</option>
+                                <option value="Grup">Grup</option>
                             </select>
                         </div>
 
@@ -48,9 +51,8 @@
                                 <option value="">Pilih Tempat</option>
                                 <option value="Indoor">Indoor (Aurora Photostudio)</option>
                                 <option value="Outdoor">Outdoor</option>
-                            </select>
-                        </div>
-
+                            </select
+                            </div>
                         <div class="mb-3" id="lokasiContainer">
                             <label for="lokasi" class="form-label">Lokasi</label>
                             <input type="text" class="form-control" id="lokasi" placeholder="Lokasi" name="lokasi">
@@ -69,7 +71,7 @@
                         <div class="text-center">
                             <button type="button" class="btn btn-primary" onclick="validateForm()">Submit</button>
                         </div>
-                    </form>
+                        </form>
                 </div>
             </div>
         </div>
@@ -77,45 +79,49 @@
 </div>
 
 <script>
-    function toggleLokasi() {
-        var selectTempat = document.getElementById('selectTempat');
-        var lokasiContainer = document.getElementById('lokasiContainer');
+function toggleLokasi() {
+var selectTempat = document.getElementById('selectTempat');
+var lokasiContainer = document.getElementById('lokasiContainer');
 
-        if (selectTempat.value === 'Outdoor') {
-            lokasiContainer.style.display = 'block';
-        } else {
-            lokasiContainer.style.display = 'none';
-        }
-    }
+if (selectTempat.value === 'Outdoor') {
+lokasiContainer.style.display = 'block';
+} else {
+lokasiContainer.style.display = 'none';
+}
+}
 
-    function validateForm() {
-        var form = document.getElementById('bookingForm');
-        var inputs = form.querySelectorAll('input, select');
+function validateForm() {
+var form = document.getElementById('bookingForm');
+var inputs = form.querySelectorAll('input, select');
 
-        var isValid = true;
+var isValid = true;
 
-        if (document.getElementById('selectTempat').value !== 'Indoor') {
-            inputs.forEach(function(input) {
-                if (!input.value) {
-                    isValid = false;
-                    input.classList.add('is-invalid');
-                } else {
-                    input.classList.remove('is-invalid');
-                }
-            });
-        }
+inputs.forEach(function(input) {
+if (!input.value) {
+isValid = false;
+input.classList.add('is-invalid');
+} else {
+input.classList.remove('is-invalid');
+}
+});
 
-        if (isValid) {
-            form.submit();
-        } else {
-            alert('Ada form yang belum dilengkapi.');
-        }
-    }
+if (isValid) {
+form.submit();
+} else {
+alert('Ada form yang belum dilengkapi.');
+}
+}
 
-    // Inisialisasi dengan menyembunyikan lokasi pada awal pemuatan halaman
-    document.addEventListener('DOMContentLoaded', function() {
-        toggleLokasi();
-    });
+document.addEventListener('DOMContentLoaded', function() {
+toggleLokasi();
+
+const urlParams = new URLSearchParams(window.location.search);
+const paket = urlParams.get('paket');
+
+if (paket) {
+document.getElementById('selectPaket').value = paket;
+}
+});
 </script>
 
 @endsection

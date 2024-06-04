@@ -35,7 +35,7 @@
         <br>20 edit foto
         <br>All Files original + edited via google drive
       </p>
-      <a href="/formbooking" class="btn btn-primary">Booking</a>
+      <a href="/formbooking?paket=Paket 1 Wisudawan" class="btn btn-primary">Booking</a>
     </div>
   </div>
 
@@ -49,7 +49,7 @@
         <br>10 edit foto per orang
         <br>All Files original + edited via google drive
       </p>
-      <a href="/formbooking" class="btn btn-primary">Booking</a>
+      <a href="/formbooking?paket=Paket Grup 2-3 Wisudawan" class="btn btn-primary">Booking</a>
     </div>
   </div>
 
@@ -63,7 +63,7 @@
         <br>10 edit foto per orang
         <br>All Files original + edited via google drive
       </p>
-      <a href="/formbooking" class="btn btn-primary">Booking</a>
+      <a href="/formbooking?paket=Paket Grup 4-5 Wisudawan" class="btn btn-primary">Booking</a>
     </div>
   </div>
 
@@ -78,7 +78,7 @@
         <br>1 file foto original
         <br>All file via google drive
       </p>
-      <a href="/formbooking" class="btn btn-primary">Booking</a>
+      <a href="/formbooking?paket=Pas Foto" class="btn btn-primary">Booking</a>
     </div>
   </div>
 
@@ -95,7 +95,7 @@
         <br>2 foto cetak + frame 12R
         <br>All file via google drive
       </p>
-      <a href="/formbooking" class="btn btn-primary">Booking</a>
+      <a href="/formbooking?paket=Maternity" class="btn btn-primary">Booking</a>
     </div>
   </div>
 
@@ -112,7 +112,7 @@
         <br>20 foto edit
         <br>All file via google drive
       </p>
-      <a href="/formbooking" class="btn btn-primary">Booking</a>
+      <a href="/formbooking?paket=Photoshoot" class="btn btn-primary">Booking</a>
     </div>
   </div>
 
@@ -129,7 +129,7 @@
         <br>20 foto edit
         <br>All file via google drive
       </p>
-      <a href="/formbooking" class="btn btn-primary">Booking</a>
+      <a href="/formbooking?paket=Personal" class="btn btn-primary">Booking</a>
     </div>
   </div>
 
@@ -146,8 +146,7 @@
         <br>20 foto edit
         <br>All file via google drive
       </p>
-      <a href="/formbooking" class="btn btn-primary">Booking</a>
-    </div>
+      <a href="/formbooking?paket=Grup" class="btn btn-primary">Booking</a>
   </div>
 </div>
 @endauth
