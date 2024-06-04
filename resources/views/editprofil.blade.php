@@ -42,22 +42,22 @@
             @method('PUT')
                   <div class="col-6 mb-3">
                     <h6>Email</h6>
-                    <input class="text-muted">
-                    @if($user)
+                    <input class="text-muted"  placeholder="masukan email baru baru">
+                    <!-- @if($user)
                       {{ $user->email }}
                     @else 
                       <p>null</p>
-                    @endif 
+                    @endif  -->
                     </input>
                   </div>
                   <div class="col-6 mb-3">
                     <h6>Name</h6>
-                    <input class="text-muted">
-                    @if($user)
+                    <input class="text-muted"  placeholder="masukan nama baru">
+                    <!-- @if($user)
                       {{ $user->name }}
                     @else
                       <p>null</p> 
-                    @endif
+                    @endif -->
                     </input>
                   </div>
                   
