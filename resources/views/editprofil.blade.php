@@ -61,6 +61,7 @@
                     </input>
                   </div>
                   <button href="{{ route('profil.update') }}" class="btn btn-success" type="submit">simpan</button>
+                  <button href="{{ route('profil.edit') }}" class="btn btn-success" type="button">kembali</button>
                 </div>
               </div>
             </div>
