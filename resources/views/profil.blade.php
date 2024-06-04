@@ -58,10 +58,6 @@
                     </p>
                   </div>
                 </div>
-                <div class="col-6 mb-3">
-                  <h6>Recent</h6>
-                  <p class="text-muted">2 hours</p>
-                </div>
               </div>
             </div>
           </div>
