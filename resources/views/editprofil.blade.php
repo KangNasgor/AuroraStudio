@@ -37,28 +37,31 @@
                 <h6>Information</h6>
                 <hr class="mt-0 mb-4">
                 <div class="row pt-1">
+                <form action=" {{ route('profil.update') }} " method="POST">
+            @csrf
+            @method('PUT')
                   <div class="col-6 mb-3">
                     <h6>Email</h6>
-                    <p class="text-muted">
-                    @if($user)
+                    <input class="text-muted">
+                    <!-- @if($user)
                       {{ $user->email }}
                     @else 
                       <p>null</p>
-                    @endif 
-                    </p>
+                    @endif  -->
+                    </input>
                   </div>
                   <div class="col-6 mb-3">
                     <h6>Name</h6>
-                    <p class="text-muted">
-                    @if($user)
+                    <input class="text-muted">
+                    <!-- @if($user)
                       {{ $user->name }}
                     @else
                       <p>null</p> 
-                    @endif
-                    </p>
+                    @endif -->
+                    </input>
                   </div>
+                  <button class="btn btn-success" role="button">simpan</button>
                 </div>
-               <a href="{{ route('profil.edit')}}" class="btn btn-success" role="button">edit</a>
               </div>
             </div>
           </div>

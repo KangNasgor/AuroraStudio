@@ -39,6 +39,11 @@ Route::get('/booking', function () {
 });
 
 Route::get('/profil', [ProfilController::class, 'show'])->name('profil');
+Route::get('/editprofil', [ProfilController::class, 'edit'])->name('profil.edit');
+Route::post('/profil', [ProfilController::class, 'update'])->name('profil.update');
+
+
+
 Route::get('/', function () {
     return view('home');
 })->name('home');

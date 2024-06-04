@@ -19,7 +19,7 @@ class SessionController extends Controller
         // Validate the request input
         $validator = User::make($request->all(), [
             'email' => ['required', 'string', 'email'],
-            'password' => ['required', 'string', 'min:6'],
+            'password' => ['required', 'string', 'min:6', 'max:21'],
         ]);
         $user = User::where('email', $request->email)->first();
 
