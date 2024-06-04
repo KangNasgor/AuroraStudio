@@ -7,10 +7,14 @@
         <table id="table" class="table table-striped table-secondary table-hover table-borderless">
             <thead>
                 <tr>
-                    <th>Customer</th>
+                    <th>Name</th>
                     <th>Date</th>
                     <th>Paket</th>
-                    <th>Payment status</th>
+                    <th>Email</th>
+                    <th>Jam</th>
+                    <th>Tempat</th>
+                    <th>Lokasi</th>
+                    <th>Payment</th>
                     <th>Status</th>
                     <th>Action</th> 
                 </tr>
@@ -19,13 +23,25 @@
             @foreach ($bookings as $book)
                 <tr>
                     <td>
-                        {{$book->customer->name}}
+                        {{$book->name}}
                     </td>
                     <td>
                         {{$book->booking_date}}
                     </td>
                     <td>
                         {{$book->paket}}
+                    </td>
+                    <td>
+                        {{$book->email}}
+                    </td>
+                    <td>
+                        {{$book->jam}}
+                    </td>
+                    <td>
+                        {{$book->tempat}}
+                    </td>
+                    <td>
+                        {{$book->lokasi}}
                     </td>
                     <td>
                         {{$book->payment_status}}

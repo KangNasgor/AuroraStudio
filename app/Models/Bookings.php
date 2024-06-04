@@ -18,13 +18,18 @@ class Bookings extends Model
         return $this->hasMany(Photography_sessions::class, 'bookings_id');
     }
     protected $fillable = [
-        'customer_id',
-        'photography_sessions_id',
+        'name',
+        'phone',
+        'email',
         'booking_date',
-        'booking_time',
+        'jam',
+        'tempat',
+        'lokasi',
         'status',
         'payment_status',
-        'paket',
+        'created_at',
         'updated_at',
+        'paket',
+        'status_aktif',
     ];
 }

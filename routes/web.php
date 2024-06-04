@@ -25,7 +25,7 @@ Route::controller(RegisterController::class)->group(function() {
 });
 Route::controller(LoginController::class)->group(function() {
     Route::get('/loginadmin', 'loginAdmin')->name('login.admin');
-    Route::post('/login/proses', 'loginsubmit')->name('login.submit');
+    Route::post('/loginadmin/proses', 'loginsubmit')->name('login.submit');
     Route::get('/logoutadmin', 'logout')->name('login.logout');
 });
 Route::controller(CustomersController::class)->group(function () {
@@ -116,12 +116,12 @@ Route::get('/', function () {
 // login proses//
 Route::get('/login', [SessionController::class, 'index'])->name('login');
 
-Route::post('/login', [SessionController::class, 'login'])->name('/proses');
+Route::post('/login/proses', [SessionController::class, 'login'])->name('login.proses');
 
 // Route::post('/loginpost', [SessionController::class, 'login'])->name('loginpost');
 //register proses//
 Route::get('registrasi', [SessionController::class, 'registrasi'])->name('registrasi');
-Route::post('/proses', [SessionController::class, 'proses'])->name('proses');
+Route::post('sesi/proses', [SessionController::class, 'proses'])->name('proses');
 //logout proses//
-Route::post('/logout', [SessionController::class, 'logout'])->name('logout');
+Route::get('/logout', [SessionController::class, 'logout'])->name('logout');
 // })->name('login');

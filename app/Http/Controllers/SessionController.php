@@ -54,11 +54,11 @@ public function proses(Request $request){
 }
 public function logout(Request $request)
 {
-    if ($request->isMethod('post')) {
-        Auth::logout();
-        return redirect('login'); 
-    }
-    return redirect()->back()->withErrors('Invalid request method');
+    Auth::logout();
+    $request->session()->invalidate();
+    $request->session()->regenerateToken();
+
+    return redirect('/');
 }
 }
 

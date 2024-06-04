@@ -62,7 +62,7 @@
                             <tbody>
                                 <tr>
                                     <td>Nama</td>
-                                    <td>{{ $bookings->nama }}</td>
+                                    <td>{{ $bookings->name }}</td>
                                 </tr>
                                 <tr>
                                     <td>Paket</td>
@@ -70,7 +70,7 @@
                                 </tr>
                                 <tr>
                                     <td>No Telepon</td>
-                                    <td>{{ $bookings->nomor_wa }}</td>
+                                    <td>{{ $bookings->phone }}</td>
                                 </tr>
                                 <tr>
                                     <td>Email</td>
@@ -88,7 +88,7 @@
                                 </tr>
                                 <tr>
                                     <td>Hari dan Tanggal</td>
-                                    <td>{{ $bookings->tanggal }}</td>
+                                    <td>{{ $bookings->booking_date }}</td>
                                 </tr>
                                 <tr>
                                     <td>Waktu</td>

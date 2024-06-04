@@ -21,7 +21,7 @@ class BookingsController extends Controller
     }
     public function store(Request $request)
     {
-        bookings::create([
+        Bookings::create([
             'customer_id' => $request->input('customer'),
             'date' => $request->input('booking_date'),
             'status' => $request->input('status'),
