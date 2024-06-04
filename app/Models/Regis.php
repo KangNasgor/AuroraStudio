@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Models;
-use Illuminate\Foundation\Auth\Regis as Authenticatable;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
 class Regis extends Authenticatable
