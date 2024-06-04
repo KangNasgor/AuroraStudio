@@ -30,6 +30,11 @@
             text-decoration: none;
             color: #000000;
         }
+        .btn-login {
+            width: 100%;
+            background-color: #007bff;
+            border-color: #007bff;
+        }
     </style>
         @if (session('error'))
             <div class="alert alert-danger">
@@ -57,10 +62,7 @@
                                 <small class="text-danger">{{ $message }}</small>
                             @enderror
                         </div>
-                        <center><button type="submit" class="btn btn-secondary btn-sm">Login</button></center>
-                        <div class="forgot-password mt-3">
-                            <center><a href="{{ route('registrasi') }}"><b>Register</b></a></center>
-                        </div>
+                        <button type="submit" class="btn btn-primary btn-login btn-sm">Login</button>
                     </form>
                 </div>
             </div>
@@ -68,5 +70,5 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 @endsection

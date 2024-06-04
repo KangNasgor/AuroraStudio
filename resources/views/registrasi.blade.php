@@ -29,8 +29,11 @@
         .forgot-password a:hover {
             text-decoration: underline;
         }
-        .btn-register {
+        .btn-register, .btn-login {
             width: 100%;
+        }
+        .text-muted {
+            color: #6c757d;
         }
     </style>
 
@@ -64,6 +67,8 @@
                         </div>
                         <button type="submit" class="btn btn-primary btn-register mt-3">Register</button>
                     </form>
+                    <p class="text-muted mt-3">Already have an account?</p>
+                    <a href="{{ route('login') }}" class="btn btn-primary btn-login mt-2">Login</a>
                 </div>
             </div>
         </div>

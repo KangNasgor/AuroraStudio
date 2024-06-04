@@ -9,7 +9,7 @@
 </head>
 <style>
   body {
-  background-image: url("{{asset('img/background.jpeg')}}");
+  background-image: url("{{ asset('publicimage/background.jpeg') }}");
   background-size: cover;
   background-attachment: fixed;
   }
@@ -24,45 +24,16 @@
     overflow: hidden;
   }
 
-  .navbar-brand-text{
+  .navbar-brand-text {
     font-size: 20px;
     font-weight: bold;
-    margin-left: 10px
-  }
-
-  .nav-link {
-    font-size: 20px;
-  }
-  <style>
-  body {
-  background-image: url("{{asset('publicimage/background.jpeg')}}");
-  background-size: cover;
-  background-attachment: fixed;
-  }
-
-  .navbar-custom {
-    background: linear-gradient(70deg, rgb(135,206, 250) 20%, rgb(0,191,255));
-  }
-
-  .navbar-brand img {
-    height: 60px;
-    border-radius: 50%;
-    overflow: hidden;
-  }
-
-  .navbar-brand-text{
-    font-size: 20px;
-    font-weight: bold;
-    margin-left: 10px
+    margin-left: 10px;
   }
 
   .nav-link {
     font-size: 20px;
   }
 </style>
-</head>
-
-
 <body>
   <nav class="navbar sticky-top navbar-expand-lg navbar-dark navbar-custom">
       <div class="container-fluid">
@@ -75,13 +46,15 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav ms-auto">
-                  <li class="nav-item"><a class="nav-link" href="/booking">Booking</a></li>
-                  <li class="nav-item"><a class="nav-link" href="/infopesanan">Details</a></li>
-                  <li class="nav-item"><a class="nav-link" href="/profil">Profil</a></li>
+                  @if(Auth::check())
+                      <li class="nav-item"><a class="nav-link" href="/booking">Booking</a></li>
+                      <li class="nav-item"><a class="nav-link" href="/infopesanan">Details</a></li>
+                      <li class="nav-item"><a class="nav-link" href="/profil">Profil</a></li>
+                  @endif
               </ul>
           </div>
       </div>
   </nav>
-@yield('content')
+  @yield('content')
 </body>
 </html>

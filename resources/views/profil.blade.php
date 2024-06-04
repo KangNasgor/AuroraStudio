@@ -30,7 +30,6 @@
               <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
                 alt="Avatar" class="img-fluid my-5" style="width: 80px;" />
               <h5>{{ $user->name }}</h5>
-              <p>Programer</p>
               <i class="far fa-edit mb-5"></i>
             </div>
             <div class="col-md-8">
@@ -66,9 +65,11 @@
               </div>
             </div>
           </div>
+        </div>
+        <div class="d-flex justify-content-end">
           <form action="{{ route('logout') }}" method="POST">
-            @csrf
-            <button type="submit" class="btn btn-danger">Logout</button>
+              @csrf
+              <button type="submit" class="btn btn-danger">Logout</button>
           </form>
         </div>
       </div>

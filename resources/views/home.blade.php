@@ -95,6 +95,6 @@
 </div>
 
 @guest
-    <center><a href="/login" class="btn btn-primary mt-4">Login untuk Booking</a></center>
+    <center><a href="/registrasi" class="btn btn-primary mt-4">Register</a></center>
 @endguest
- @endsection
+@endsection
