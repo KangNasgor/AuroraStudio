@@ -52,14 +52,11 @@ public function proses(Request $request){
     ]);
         return redirect('login')->with('success', 'Registration successful, please check your phone for verification.');
 }
-public function logout(Request $request)
-{
-    if ($request->isMethod('post')) {
-        Auth::logout();
-        return redirect('login'); 
+public function logout(Request $request) 
+    {
+        $request->session()->flush();
+        return redirect('/login');
     }
-    return redirect()->back()->withErrors('Invalid request method');
-}
 }
 
 
