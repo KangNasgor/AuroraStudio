@@ -67,10 +67,7 @@
           </div>
         </div>
         <div class="d-flex justify-content-end">
-            <form action="{{ route('logout') }}" method="POST">
-                @csrf
-                <button type="submit" class="btn btn-danger">Logout</button>
-            </form>
+            <a href="{{ route('logout') }}" type="submit" class="btn btn-danger">Logout</a>
         </div>
 
       </div>

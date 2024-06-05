@@ -46,7 +46,7 @@
     </head>
     <body class="wrapper">
         <div class="login">
-            <form action="{{ route('login.submit') }}" method="POST" class="form form-control">
+            <form action="/loginadmin/proses" method="POST" class="form form-control">
                 @csrf
                 @method('POST')
                 <div class="box justify-content-evenly">

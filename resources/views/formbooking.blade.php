@@ -14,16 +14,15 @@
             <div class="card shadow">
                 <div class="card-body">
                     <h2 class="card-title text-center mb-4">Booking Aurora Photostudio</h2>
-                    <form id="bookingForm" action="{{ route('form.store') }}" method="POST">
+                    <form id="bookingForm" action="/formbooking/kirim" method="POST">
                         @csrf
-                        @method('POST')
                         <div class="mb-3">
                             <label for="nama" class="form-label">Nama</label>
-                            <input type="text" class="form-control" id="nama" placeholder="Nama" name="nama" autocomplete="name" required value="{{ Auth::check() ? Auth::user()->name : '' }}">
+                            <input type="text" class="form-control" id="nama" placeholder="Nama" name="name" autocomplete="name" required value="{{ Auth::check() ? Auth::user()->name : '' }}">
                         </div>
                         <div class="mb-3">
-                            <label for="nomorWA" class="form-label">Nomor WA aktif</label>
-                            <input type="number" class="form-control" id="nomorWA" placeholder="Enter phone number" name="nomor_wa" required>
+                            <label for="nomor_wa" class="form-label">Nomor WA aktif</label>
+                            <input type="number" class="form-control" id="nomor_wa" placeholder="Enter phone number" name="phone" required>
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">Email</label>
@@ -51,8 +50,8 @@
                                 <option value="">Pilih Tempat</option>
                                 <option value="Indoor">Indoor (Aurora Photostudio)</option>
                                 <option value="Outdoor">Outdoor</option>
-                            </select
-                            </div>
+                            </select>
+                        </div>
                         <div class="mb-3" id="lokasiContainer">
                             <label for="lokasi" class="form-label">Lokasi</label>
                             <input type="text" class="form-control" id="lokasi" placeholder="Lokasi" name="lokasi">
@@ -61,7 +60,7 @@
                         <div class="row">
                             <div class="col-md-6 mb-3">
                                 <label for="hariTanggal" class="form-label">Hari dan Tanggal</label>
-                                <input type="date" class="form-control" id="hariTanggal" name="tanggal" required>
+                                <input type="date" class="form-control" id="hariTanggal" name="booking_date" required>
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label for="jamBooking" class="form-label">Jam Booking</label>
@@ -69,9 +68,9 @@
                             </div>
                         </div>
                         <div class="text-center">
-                            <button type="button" class="btn btn-primary" onclick="validateForm()">Submit</button>
+                            <button type="submit" class="btn btn-primary">Submit</button>
                         </div>
-                        </form>
+                    </form>
                 </div>
             </div>
         </div>

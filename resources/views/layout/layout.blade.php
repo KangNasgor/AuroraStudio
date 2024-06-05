@@ -60,7 +60,7 @@
             <a href="{{ url('images') }}" class="nav-link">Images</a>
           </li>
           <li class="nav-item d-none d-sm-inline-block">
-            <a href="/logout" class="nav-link">Logout</a>
+            <a href="{{ route('login.logout') }}" class="nav-link">Logout</a>
           </li>
         </ul>
     </nav>
