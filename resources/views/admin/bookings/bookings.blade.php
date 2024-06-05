@@ -7,6 +7,7 @@
         <table id="table" class="table table-striped table-secondary table-hover table-borderless">
             <thead>
                 <tr>
+                    <th>Id</th>
                     <th>Name</th>
                     <th>Date</th>
                     <th>Paket</th>
@@ -22,6 +23,9 @@
             <tbody>
             @foreach ($bookings as $book)
                 <tr>
+                    <td>
+                        {{$book->id}}
+                    </td>
                     <td>
                         {{$book->name}}
                     </td>

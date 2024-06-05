@@ -4,32 +4,24 @@
 <table id="table" class="table table-striped table-secondary table-hover table-borderless">
     <thead>
         <tr>
+            <th>Customer</th>
             <th>Photographer</th>
-            <th>Date</th>
-            <th>Start time</th>
-            <th>End time</th>
-            <th>Paket</th>
-            <th>Action</th> 
+            <th>Status_aktif</th>
+            <th>Action</th>
         </tr>
     </thead>
     <tbody>
-         @foreach ($photography_sessions as $pho)
-                    <tr>
-                        <td>
-                            {{$pho->photographer->name}}
-                        </td>
-                        <td>
-                            {{$pho->booking->booking_date}}
-                        </td>
-                        <td>
-                            {{$pho->start_time}}
-                        </td>
-                        <td>
-                            {{$pho->end_time}}
-                        </td>
-                        <td>
-                            {{$pho->paket}}
-                        </td>
+        @foreach ($photography_sessions as $pho)
+            <tr>
+                <td>
+                    {{$pho->customer}}
+                </td>
+                <td>
+                    {{$pho->photographer->name}}
+                </td>
+                <td>
+                    {{$pho->status_aktif}}
+                </td>
                         <td>
                             <a href="{{ route('photography_sessions.restore', $pho->id) }}" class="btn btn-primary"><i class="fa-solid fa-arrow-rotate-left"></i></a>
                             <a class="btn btn-danger" data-toggle="modal" data-target="#del{{ $pho->id }}"><i class="fa-solid fa-trash"></i></a>

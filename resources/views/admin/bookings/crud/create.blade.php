@@ -6,12 +6,8 @@
         <form action="/bookings/create/update" method="POST" class="form w-75 border border-secondary rounded-1">
             @csrf
             <div class="box justify-content-evenly">
-                <label class="form weight-bold col-5">Customer</label>
-                <select class="custom-select border border-secondary rounded-1 col-6" id="inputGroupSelect01" name="customer">
-                    @foreach ($customer as $cus)
-                        <option value="{{ $cus->id }}">{{$cus->name}}</option>
-                    @endforeach
-                </select>
+                <label class="form weight-bold col-5">Nama Customer</label>
+                <input type="text" class="border border-secondary rounded-1 col-6" name="name">
             </div>
             <div class="box justify-content-evenly">
                 <label class="form weight-bold col-5">Date</label>
@@ -28,6 +24,26 @@
                     <option value="Personal">Personal</option>
                     <option value="Grup">Grup</option>
                 </select>
+            </div>
+            <div class="box justify-content-evenly">
+                <label class="form weight-bold col-5">Phone</label>
+                <input type="tel" class="border border-secondary rounded-1 col-6" name="phone">
+            </div>
+            <div class="box justify-content-evenly">
+                <label class="form weight-bold col-5">Email</label>
+                <input type="text" class="border border-secondary rounded-1 col-6" name="email">
+            </div>
+            <div class="box justify-content-evenly">
+                <label class="form weight-bold col-5">Jam</label>
+                <input type="time" class="border border-secondary rounded-1 col-6" name="jam">
+            </div>
+            <div class="box justify-content-evenly">
+                <label class="form weight-bold col-5">Tempat</label>
+                <input type="text" class="border border-secondary rounded-1 col-6" name="tempat">
+            </div>
+            <div class="box justify-content-evenly">
+                <label class="form weight-bold col-5">Lokasi</label>
+                <input type="text" class="border border-secondary rounded-1 col-6" name="lokasi">
             </div>
             <div class="box justify-content-evenly">
                 <label class="form weight-bold col-5">Status</label>

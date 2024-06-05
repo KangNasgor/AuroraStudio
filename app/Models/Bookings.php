@@ -9,13 +9,9 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class Bookings extends Model
 {
     use HasFactory;
-    public function customer()
+    public function photography_sessions()
     {
-        return $this->belongsTo(Customers::class);
-    }
-    public function photography_sessions(): HasMany
-    {
-        return $this->hasMany(Photography_sessions::class, 'bookings_id');
+        return $this->belongsTo(Photography_sessions::class, 'customer');
     }
     protected $fillable = [
         'name',

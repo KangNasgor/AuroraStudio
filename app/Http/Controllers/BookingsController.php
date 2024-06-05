@@ -22,15 +22,15 @@ class BookingsController extends Controller
     public function store(Request $request)
     {
         Bookings::create([
-            'customer_id' => $request->input('customer'),
-            'date' => $request->input('booking_date'),
-            'status' => $request->input('status'),
-            'payment_status' => $request->input('payment_status'),
-            'paket' => $request->input('paket'),
-            'booking_date' => $request->input('booking_date'),
-            'created_at' => now(),
-            'updated_at' => now(),
-            'status_aktif' => 'aktif'
+            'name'           =>$request->input('name'),
+            'phone'          =>$request->input('phone'),
+            'email'          =>$request->input('email'),
+            'lokasi'         =>$request->input('lokasi'),
+            'paket'          =>$request->input('paket'),
+            'tempat'         =>$request->input('tempat'),
+            'booking_date'   =>$request->input('booking_date'),
+            'jam'            =>$request->input('jam'),
+            'created_at'     =>NOW()
         ]);
 
         return redirect()->route('bookings');
@@ -45,11 +45,14 @@ class BookingsController extends Controller
     {
         $model = bookings::where('id', $id)->first();
         $model->update([
-            'customer_id' => $request->input('customer'),
-            'booking_date' => $request->input('booking_date'),
-            'paket' => $request->input('paket'),
-            'status' => $request->input('status'),
-            'payment_status' => $request->input('payment_status'),
+            'name'           =>$request->input('name'),
+            'phone'          =>$request->input('phone'),
+            'email'          =>$request->input('email'),
+            'lokasi'         =>$request->input('lokasi'),
+            'paket'          =>$request->input('paket'),
+            'tempat'         =>$request->input('tempat'),
+            'booking_date'   =>$request->input('booking_date'),
+            'jam'            =>$request->input('jam'),
             'created_at' => now(),
             'updated_at' => now(),
             'status_aktif' => 'aktif'

@@ -12,29 +12,22 @@ class Photography_sessionsController extends Controller
 {
     public function photography_sessions()
     {
-        $photography_sessions = Photography_sessions::where('status_aktif', '=', 'aktif')->with('booking')->get();
+        $photography_sessions = Photography_sessions::where('status_aktif', '=', 'aktif')->get();
         return view('admin/photography_sessions/photography_sessions', compact('photography_sessions'));
     }
     public function create()
     {
         $photography_sessions = Photographers::where('status_aktif', '=', 'aktif')->get();
-        $customer = Customers::where('status_aktif', '=', 'aktif')->get();
+        $customer = Bookings::where('status_aktif', '=', 'aktif')->get();
         $date = Bookings::where('status_aktif', '=', 'aktif')->get();
         return view('admin/photography_sessions/crud/create', compact('photography_sessions', 'customer', 'date'));
     }
     public function store(Request $request)
     {
-        $request->validate([
-            'start_time' => 'required|unique:photography_sessions,start_time',
-            'end_time' => 'required|unique:photography_sessions,end_time',
-        ]);
         Photography_sessions::create([
             'photographer_id' => $request->input('photographer'),
-            'customer_id' =>$request->input('customer'),
-            'bookings_id' => $request->input('date'),
-            'start_time' => $request->input('start_time'),
-            'end_time' => $request->input('end_time'),
-            'paket' => $request->input('paket'),
+            'customer' =>$request->input('customer'),
+            'date' => $request->input('date'),
             'created_at' => now(),
             'updated_at' => now(),
             'status_aktif' => 'aktif'
