@@ -6,12 +6,13 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
 use Illuminate\Http\Request;
 use App\Models\Bookings;
+use App\Models\Images;
 
 class BookingController extends Controller
 {
-    public function index(){
-
-        return view();
+    public function bookingpage(){
+        $images = Images::where('status_aktif', '=', 'aktif')->first();
+        return view('booking', compact('images'));
     }
 
     public function form(): View

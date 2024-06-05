@@ -7,12 +7,9 @@
         <table id="table" class="table table-striped table-secondary table-hover table-borderless">
             <thead>
                 <tr>
-                    <th>Photographer</th>
-                    <th>Date</th>
                     <th>Customer</th>
-                    <th>Start time</th>
-                    <th>End time</th>
-                    <th>Paket</th>
+                    <th>Photographer</th>
+                    <th>Status_aktif</th>
                     <th>Action</th>
                 </tr>
             </thead>
@@ -20,22 +17,13 @@
                 @foreach ($photography_sessions as $pho)
                     <tr>
                         <td>
+                            {{$pho->customer}}
+                        </td>
+                        <td>
                             {{$pho->photographer->name}}
                         </td>
                         <td>
-                            {{ $pho->booking->booking_date }}
-                        </td>
-                        <td>
-                            {{$pho->customer->name}}
-                        </td>
-                        <td>
-                            {{$pho->start_time}}
-                        </td>
-                        <td>
-                            {{$pho->end_time}}
-                        </td>
-                        <td>
-                            {{$pho->booking->paket}}
+                            {{$pho->status_aktif}}
                         </td>
                         <td>
                             <a href="{{ route('photography_sessions.editpage', $pho->id)}}" class="btn btn-success"><i class="fa-solid fa-pencil"></i></a>

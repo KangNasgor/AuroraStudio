@@ -18,20 +18,14 @@ class Photography_sessions extends Model
     {
         return $this->belongsTo(Photographers::class, 'photographer_id');
     }
-    public function customer()
+    public function booking()
     {
-        return $this->belongsTo(Customers::class, 'customer_id');
-    }
-    public function booking(): BelongsTo
-    {
-        return $this->belongsTo(Bookings::class, 'bookings_id');
+        return $this->hasMany(Bookings::class, 'customer');
     }
     protected $fillable = [
         'photographer_id',
-        'customer_id',
-        'bookings_id',
-        'start_time',
-        'end_time',
-        'price',
+        'customer',
+        'status_aktif',
+        'date',
     ];
 }

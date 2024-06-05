@@ -44,9 +44,6 @@
           <li class="nav-item d-none d-sm-inline-block">
             <a href="/dashboard" class="nav-link">Home</a>
           </li>
-          <li class="nav-item d-none d-sm-inline-block">
-            <a href="{{ url('customers') }}" class="nav-link">Customers</a>
-          </li>
           <li class="nav-item dropdown">
             <a href="{{ url('photographers') }}" class="nav-link">Photographers</a>
           </li>

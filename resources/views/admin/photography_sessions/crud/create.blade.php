@@ -14,22 +14,6 @@
                 </select>
             </div>
             <div class="box justify-content-evenly">
-                <label class="form weight-bold col-5">Date</label>
-                <select class="custom-select border border-secondary rounded-1 col-6" id="inputGroupSelect01" name="date">
-                    @foreach ($date as $tgl)
-                        <option value="{{ $tgl->id }}">{{ $tgl->booking_date }}</option>
-                    @endforeach
-                </select>
-            </div>
-            <div class="box justify-content-evenly">
-                <label class="form weight-bold col-5">Start time</label>
-                <input type="time" class="border border-secondary rounded-1 col-6" name="start_time" required>
-            </div>
-            <div class="box justify-content-evenly">
-                <label class="form weight-bold col-5">End time</label>
-                <input type="time" class="border border-secondary rounded-1 col-6" name="end_time" required>
-            </div>
-            <div class="box justify-content-evenly">
                 <label class="form weight-bold col-5">Customer</label>
                 <select class="custom-select border border-secondary rounded-1 col-6" id="inputGroupSelect01" name="customer">
                     @foreach ($customer as $cus)

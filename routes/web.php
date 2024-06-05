@@ -95,11 +95,9 @@ Route::controller(BookingController::class)->group(function () {
     Route::get('/infopesanan','infopesanan')->name('infopesanan.index');
     Route::get('/formbooking','form')->name('form.index');
     Route::post('/formbooking/kirim','formStore')->name('form.store');
+    Route::get('/booking', 'bookingpage')->name('booking');
 });
 
-Route::get('/booking', function () {
-    return view('booking');
-});
 //profil//
 // Route::put('/profil', function () {
 //     return 'profil.update';
