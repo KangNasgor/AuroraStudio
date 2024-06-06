@@ -99,12 +99,12 @@ Route::controller(BookingController::class)->group(function () {
 });
 
 //profil//
-// Route::put('/profil', function () {
-//     return 'profil.update';
-// });
 Route::get('/profil', [ProfilController::class, 'show'])->name('profil');
 Route::get('/editprofil', [ProfilController::class, 'edit'])->name('profil.edit');
-Route::put('/profil', [ProfilController::class, 'update'])->name('profil.update');
+Route::put('/editprofil', [ProfilController::class, 'update'])->name('profil.update');
+Route::post('/editprofil', [ProfilController::class, 'show'])->name('profil.edit');
+Route::get('/profil', [ProfilController::class, 'show'])->name('profil.edit');
+
 
 
 

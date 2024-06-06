@@ -37,12 +37,12 @@
                 <h6>Information</h6>
                 <hr class="mt-0 mb-4">
                 <div class="row pt-1">
-                <form action=" {{ route('profil.update') }} " method="PUT">
+                <form action=" {{ route('profil.update') }} " method="POST">
                  @csrf
                  @method('PUT')
                   <div class="col-6 mb-3">
                     <h6>Email</h6>
-                    <input class="text-muted"  placeholder="masukan email baru baru">
+                    <input class="text-muted"  placeholder="masukan email baru baru" id="email" value="{{ old('name') }}" >
                     <!-- @if($user)
                       {{ $user->email }}
                     @else 
@@ -52,7 +52,7 @@
                   </div>
                   <div class="col-6 mb-3">
                     <h6>Name</h6>
-                    <input class="text-muted"  placeholder="masukan nama baru">
+                    <input class="text-muted"  placeholder="masukan nama baru" id="name"value="{{ old('email') }}">
                     <!-- @if($user)
                       {{ $user->name }}
                     @else
@@ -61,7 +61,7 @@
                     </input>
                   </div>
                   <button href="{{ route('profil.update') }}" class="btn btn-success" type="submit">simpan</button>
-                  <button href="{{ route('profil.update') }}" class="btn btn-success" type="submit">kembali</button>
+                  <button href="{{ route('profil.edit') }}" class="btn btn-success" type="submit">kembali</button>
                 </div>
               </div>
             </div>

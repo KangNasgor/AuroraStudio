@@ -23,7 +23,7 @@ class ProfilController extends Controller
     $user = Auth::user();
 
     $request->validate([
-        'username' => 'required|string|max:255',
+        'name' => 'required|string|max:255',
         'email' => 'required|string|email|max:255|unique:users,email,' . $user->id,
     ], [
     ]);
@@ -33,6 +33,6 @@ class ProfilController extends Controller
         'email' => $request->email,
     ]);
 
-    return redirect()->route('profile-show')->with('success', 'Profile updated successfully.');
+    return redirect()->route('profil-show')->with('success', 'Profile updated successfully.');
 }
 }
