@@ -26,8 +26,12 @@
     .carousel-control-next-icon {
         background-color: black;
     }
-
-
+    .regisloginbutton{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+    }
 </style>
 <div id="carouselExampleIndicators" class="carousel slide">
   <div class="carousel-indicators">
@@ -40,45 +44,45 @@
     <div class="carousel-item active">
             <div class="row text-center justify-content-center ">
                 <div class="card g-col-4  mx-4 my-3" style="width: 16rem; height: 20rem;">
-            <img src="{{asset('publicimage/card1.jpg')}}" class="card-img-top my-3 col-sm-2" style="height: 287px;"  alt="...">
+            <img src="{{asset('storage/images/foto_contoh1/foto_contoh1.jpg')}}" class="card-img-top my-3 col-sm-2" style="height: 287px;"  alt="...">
         </div>
 
         <div class="card g-col-4  mx-4 my-3" style="width: 16rem; height: 20rem;">
-            <img src="{{asset('publicimage/card2.jpg')}}"class="card-img-top my-3 col-sm-2" style="height: 287px;"  alt="...">
+            <img src="{{asset('storage/images/foto_contoh2/foto_contoh2.jpg')}}"class="card-img-top my-3 col-sm-2" style="height: 287px;"  alt="...">
         </div>
 
         <div class="card g-col-4  mx-4 my-3" style="width: 16rem; height: 20rem;">
-            <img src="{{asset('publicimage/card3.jpg')}}" class="card-img-top my-3 col-sm-2" style="height: 287px;"  alt="...">
+            <img src="{{asset('storage/images/foto_contoh3/foto_contoh3.jpg')}}" class="card-img-top my-3 col-sm-2" style="height: 287px;"  alt="...">
         </div>
         </div>
     </div>
     <div class="carousel-item">
     <div class="row text-center justify-content-center ">
         <div class="card g-col-4  mx-4 my-3" style="width: 16rem; height: 20rem;">
-            <img src="{{asset('publicimage/card4.jpg')}}" class="card-img-top my-3 col-sm-2" style="height: 287px;"  alt="...">
+            <img src="{{asset('storage/images/foto_contoh4/foto_contoh4.jpg')}}" class="card-img-top my-3 col-sm-2" style="height: 287px;"  alt="...">
         </div>
 
         <div class="card g-col-4  mx-4 my-3" style="width: 16rem; height: 20rem;">
-            <img src="{{asset('publicimage/card5.jpg')}}" class="card-img-top my-3 col-sm-2" style="height: 287px;"  alt="...">
+            <img src="{{asset('storage/images/foto_contoh5/foto_contoh5.jpg')}}" class="card-img-top my-3 col-sm-2" style="height: 287px;"  alt="...">
         </div>
 
         <div class="card g-col-4  mx-4 my-3" style="width: 16rem; height: 20rem;">
-            <img src="{{asset('publicimage/card6.jpg')}}" class="card-img-top my-3 col-sm-2" style="height: 287px;"  alt="...">
+            <img src="{{asset('storage/images/foto_contoh6/foto_contoh6.jpg')}}" class="card-img-top my-3 col-sm-2" style="height: 287px;"  alt="...">
         </div>
         </div>
     </div>
     <div class="carousel-item">
     <div class="row text-center justify-content-center ">
          <div class="card g-col-4  mx-4 my-3" style="width: 16rem; height: 20rem;">
-            <img src="{{asset('publicimage/card7.jpg')}}" class="card-img-top my-3 col-sm-2" style="height: 287px;"  alt="...">
+            <img src="{{asset('storage/images/foto_contoh7/foto_contoh7.jpg')}}" class="card-img-top my-3 col-sm-2" style="height: 287px;"  alt="...">
         </div>
 
         <div class="card g-col-4  mx-4 my-3" style="width: 16rem; height: 20rem;">
-            <img src="{{asset('publicimage/card8.jpg')}}" class="card-img-top my-3 col-sm-2" style="height: 287px;"  alt="...">
+            <img src="{{asset('storage/images/foto_contoh8/foto_contoh8.jpg')}}" class="card-img-top my-3 col-sm-2" style="height: 287px;"  alt="...">
         </div>
 
         <div class="card g-col-4  mx-4 my-3" style="width: 16rem; height: 20rem;">
-            <img src="{{asset('publicimage/card9.jpg')}}" class="card-img-top my-3 col-sm-2" style="height: 287px;"  alt="...">
+            <img src="{{asset('storage/images/foto_contoh9/foto_contoh9.jpg')}}" class="card-img-top my-3 col-sm-2" style="height: 287px;"  alt="...">
         </div>
         </div>
     </div>
@@ -95,6 +99,11 @@
 </div>
 
 @guest
-    <center><a href="/registrasi" class="btn btn-primary mt-4">Register</a></center>
+    <div class="regisloginbutton">
+        <div class="regisloginbutton2"> 
+            <a href="/registrasi" class="btn btn-primary mt-4">Register</a> 
+            <a href="/login" class="btn btn-primary mt-4">Login</a>   
+        </div> 
+    </div>
 @endguest
 @endsection

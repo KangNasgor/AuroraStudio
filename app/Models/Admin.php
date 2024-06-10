@@ -17,10 +17,12 @@ class Admin extends Authenticatable
      *
      * @var array<int, string>
      */
-    // public function getIsAdminAttribute()
-    // {
-    //     return $this->attributes['role'] === 'admin';
-    // }
+    public function role(){
+        return $this->belongsTo(Role::class);
+    }
+    public function isAdmin(){
+        return $this->roles === 2;
+    }
     protected $fillable = [
         'id',
         'name',

@@ -11,7 +11,7 @@ use App\Models\Images;
 class BookingController extends Controller
 {
     public function bookingpage(){
-        $images = Images::where('status_aktif', '=', 'aktif')->first();
+        $images = Images::where('status_aktif', '=', 'aktif')->get();
         return view('booking', compact('images'));
     }
 
@@ -22,17 +22,6 @@ class BookingController extends Controller
 
     public function formStore(Request $request)
 {
-    // $this->validate($request, [
-    //     'nama' => 'required',
-    //     'nomor_wa' => 'required',
-    //     'email' => 'required',
-    //     'paket' => 'required',
-    //     'tempat' => 'required',
-    //     'tanggal' => 'required',
-    //     'jam' => 'required',
-    //     // 'lokasi' => 'required_if:tempat,Outdoor',
-    // ]);
-
     Bookings::create([
         'name'           =>$request->input('name'),
         'phone'          =>$request->input('phone'),

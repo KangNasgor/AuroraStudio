@@ -7,12 +7,23 @@
         <table id="table" class="table table-striped table-secondary table-hover table-borderless">
             <thead>
                 <tr>
-                    <th>Foto Wisuda</th>
-                    <th>Foto Personal</th>
-                    <th>Foto Grup</th>
-                    <th>Foto Maternity</th>
-                    <th>Created At</th>
-                    <th>Updated At</th>
+                    <th>Personal</th>
+                    <th>Grup</th>
+                    <th>Maternity</th>
+                    <th>Photoshoot</th>
+                    <th>1 Wisudawan</th>
+                    <th>2-3 Wisudawan</th>
+                    <th>4-5 Wisudawan</th>
+                    <th>Pas Foto</th>
+                    <th>Contoh 1</th>
+                    <th>Contoh 2</th>
+                    <th>Contoh 3</th>
+                    <th>Contoh 4</th>
+                    <th>Contoh 5</th>
+                    <th>Contoh 6</th>
+                    <th>Contoh 7</th>
+                    <th>Contoh 8</th>
+                    <th>Contoh 9</th>
                     <th>Status Aktif</th>
                     <th>Action</th>
                 </tr>
@@ -21,39 +32,141 @@
                 @foreach ($images as $img)
                     <tr>
                         <td>
-                            @if($img->foto_wisuda)
-                                <img src="data:image/jpeg;base64,{{ base64_encode($img->foto_wisuda) }}" alt="Foto Wisuda" class="img-fluid">
+                            @if($img->foto_personal)
+                                <img src="{{ asset('storage/images/foto_personal/foto_personal.jpg')}}" alt="Foto Personal" class="img-fluid">
                             @else
                                 <p>No image available</p>
                             @endif
                         </td>
-                        <td>
-                            @if($img->foto_personal)
-                            <img src="data:image/jpeg;base64,{{ base64_encode($img->foto_personal) }}" alt="Foto Personal" class="img-fluid">
-                        @else
-                            <p>No image available</p>
-                        @endif
-                        </td>
+                        
                         <td>
                             @if($img->foto_grup)
-                            <img src="data:image/jpeg;base64,{{ base64_encode($img->foto_grup) }}" alt="Foto Grup" class="img-fluid">
-                        @else
-                            <p>No image available</p>
-                        @endif
+                                <img src="{{ asset('storage/images/foto_grup/foto_grup.jpg')}}" alt="Foto Grup" class="img-fluid">
+                            @else
+                                <p>No image available</p>
+                            @endif
                         </td>
+                        
                         <td>
                             @if($img->foto_maternity)
-                            <img src="data:image/jpeg;base64,{{ base64_encode($img->foto_maternity) }}" alt="Foto Maternity" class="img-fluid">
-                        @else
-                            <p>No image available</p>
-                        @endif
+                                <img src="{{ asset('storage/images/foto_maternity/foto_maternity.jpg')}}" alt="Foto Maternity" class="img-fluid">
+                            @else
+                                <p>No image available</p>
+                            @endif
                         </td>
+                        
                         <td>
-                            {{$img->created_at}}
+                            @if($img->foto_photoshoot)
+                                <img src="{{ asset('storage/images/foto_photoshoot/foto_photoshoot.jpg')}}" alt="Foto Photoshoot" class="img-fluid">
+                            @else
+                                <p>No image available</p>
+                            @endif
                         </td>
+                        
                         <td>
-                            {{$img->updated_at}}
+                            @if($img->foto_paket1wisudawan)
+                                <img src="{{ asset('storage/images/foto_paket1wisudawan/foto_paket1wisudawan.jpg')}}" alt="Foto Paket 1 Wisudawan" class="img-fluid">
+                            @else
+                                <p>No image available</p>
+                            @endif
                         </td>
+                        
+                        <td>
+                            @if($img->foto_paketgrup23wisudawan)
+                                <img src="{{ asset('storage/images/foto_paketgrup23wisudawan/foto_paket2-3wisudawan.jpg')}}" alt="Foto Paket Grup 2-3 Wisudawan" class="img-fluid">
+                            @else
+                                <p>No image available</p>
+                            @endif
+                        </td>
+                        
+                        <td>
+                            @if($img->foto_paketgrup45wisudawan)
+                                <img src="{{ asset('storage/images/foto_paketgrup45wisudawan/foto_paket4-5wisudawan.jpg')}}" alt="Foto Paket Grup 4-5 Wisudawan" class="img-fluid">
+                            @else
+                                <p>No image available</p>
+                            @endif
+                        </td>
+                        
+                        <td>
+                            @if($img->foto_pasfoto)
+                                <img src="{{ asset('storage/images/foto_pasfoto/foto_pasfoto.jpg')}}" alt="Foto Pasfoto" class="img-fluid">
+                            @else
+                                <p>No image available</p>
+                            @endif
+                        </td>
+                        
+                        <td>
+                            @if($img->foto_contoh1)
+                                <img src="{{ asset('storage/images/foto_contoh1/foto_contoh1.jpg')}}" alt="Foto Contoh 1" class="img-fluid">
+                            @else
+                                <p>No image available</p>
+                            @endif
+                        </td>
+                        
+                        <td>
+                            @if($img->foto_contoh2)
+                                <img src="{{ asset('storage/images/foto_contoh2/foto_contoh2.jpg')}}" alt="Foto Contoh 2" class="img-fluid">
+                            @else
+                                <p>No image available</p>
+                            @endif
+                        </td>
+                        
+                        <td>
+                            @if($img->foto_contoh3)
+                                <img src="{{ asset('storage/images/foto_contoh3/foto_contoh3.jpg')}}" alt="Foto Contoh 3" class="img-fluid">
+                            @else
+                                <p>No image available</p>
+                            @endif
+                        </td>
+                        
+                        <td>
+                            @if($img->foto_contoh4)
+                                <img src="{{ asset('storage/images/foto_contoh4/foto_contoh4.jpg')}}" alt="Foto Contoh 4" class="img-fluid">
+                            @else
+                                <p>No image available</p>
+                            @endif
+                        </td>
+                        
+                        <td>
+                            @if($img->foto_contoh5)
+                                <img src="{{ asset('storage/images/foto_contoh5/foto_contoh5.jpg')}}" alt="Foto Contoh 5" class="img-fluid">
+                            @else
+                                <p>No image available</p>
+                            @endif
+                        </td>
+                        
+                        <td>
+                            @if($img->foto_contoh6)
+                                <img src="{{ asset('storage/images/foto_contoh6/foto_contoh6.jpg')}}" alt="Foto Contoh 6" class="img-fluid">
+                            @else
+                                <p>No image available</p>
+                            @endif
+                        </td>
+                        
+                        <td>
+                            @if($img->foto_contoh7)
+                                <img src="{{ asset('storage/images/foto_contoh7/foto_contoh7.jpg')}}" alt="Foto Contoh 7" class="img-fluid">
+                            @else
+                                <p>No image available</p>
+                            @endif
+                        </td>
+                        
+                        <td>
+                            @if($img->foto_contoh8)
+                                <img src="{{ asset('storage/images/foto_contoh8/foto_contoh8.jpg')}}" alt="Foto Contoh 8" class="img-fluid">
+                            @else
+                                <p>No image available</p>
+                            @endif
+                        </td>
+                        
+                        <td>
+                            @if($img->foto_contoh9)
+                                <img src="{{ asset('storage/images/foto_contoh9/foto_contoh9.jpg')}}" alt="Foto Contoh 9" class="img-fluid">
+                            @else
+                                <p>No image available</p>
+                            @endif
+                        </td>
+                        
                         <td>
                             {{$img->status_aktif}}
                         </td>

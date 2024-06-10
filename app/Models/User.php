@@ -8,12 +8,10 @@ class User extends Authenticatable
 {
     use Notifiable;
 
-    // Kolom yang dapat diisi
+
     protected $fillable = [
         'name', 'email', 'password',
     ];
-
-    // Tipe casting atribut
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];

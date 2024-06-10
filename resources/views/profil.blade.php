@@ -61,7 +61,6 @@
                     </p>
                   </div>
                 </div>
-               <a href="{{ route('profil.edit') }}" class="btn btn-success" role="button">edit</a>
               </div>
             </div>
           </div>

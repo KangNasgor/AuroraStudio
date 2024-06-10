@@ -17,10 +17,6 @@ class Users extends Authenticatable
      *
      * @var array<int, string>
      */
-    public function getIsAdminAttribute()
-    {
-        return $this->attributes['role'] === 'admin';
-    }
     protected $fillable = [
         'name',
         'password',

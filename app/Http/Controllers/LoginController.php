@@ -20,7 +20,7 @@ class LoginController extends Controller{
     }
     public function loginsubmit(Request $request){
         $user = Admin::where('name', '=', $request->name)->first();
-        $adminValidation = Admin::where('role', '=', 'Admin')->first();
+        $role = $user->roles;
         if(!$user){
             return redirect()->back();
         }
@@ -32,7 +32,7 @@ class LoginController extends Controller{
             if ($validator->fails()) {
                 return redirect()->back();
             } else {
-                if($user->password === $request->password && $adminValidation){
+                if($user->password === $request->password && $role === 2){
                     Auth::login($user);
                     return redirect()->route('customer.count');
                 }

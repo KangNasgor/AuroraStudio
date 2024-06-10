@@ -25,7 +25,7 @@
 @auth
 <div class="row text-center justify-content-center ">
   <div class="card g-col-4 mx-4 my-4" style="width: 16rem;">
-    <img src="{{ asset('publicimage/paket1grad.jpg') }}" class="card-img-top my-3 col-sm-4" alt="...">
+    <img src="{{ asset('storage/images/foto_paket1wisudawan/foto_paket1wisudawan.jpg') }}" class="card-img-top my-3 col-sm-4" alt="...">
     <div class="card-body">
       <h5 class="card-title">Paket 1 Wisudawan</h5>
       <p class="card-text">
@@ -40,7 +40,7 @@
   </div>
 
   <div class="card g-col-4 mx-4 my-4" style="width: 16rem;">
-    <img src="{{ asset('publicimage/paket2grad.jpg') }}" class="card-img-top my-3" alt="...">
+    <img src="{{ asset('storage/images/foto_paketgrup23wisudawan/foto_paket2-3wisudawan.jpg') }}" class="card-img-top my-3" alt="...">
     <div class="card-body">
       <h5 class="card-title">Paket Grup 2-3 Wisudawan</h5>
       <p class="card-text">
@@ -54,7 +54,7 @@
   </div>
 
   <div class="card g-col-4 mx-4 my-4" style="width: 16rem;">
-    <img src="{{ asset('publicimage/paket3grad.jpg') }}" class="card-img-top my-3" alt="...">
+    <img src="{{ asset('storage/images/foto_paketgrup45wisudawan/foto_paket4-5wisudawan.jpg') }}" class="card-img-top my-3" alt="...">
     <div class="card-body">
       <h5 class="card-title">Paket Grup 4-5 Wisudawan</h5>
       <p class="card-text">
@@ -68,7 +68,7 @@
   </div>
 
   <div class="card g-col-4 mx-4 my-4" style="width: 16rem;">
-    <img src="{{ asset('publicimage/pasfoto.jpg') }}" class="card-img-top my-3" alt="...">
+    <img src="{{ asset('storage/images/foto_pasfoto/foto_pasfoto.jpg') }}" class="card-img-top my-3" alt="...">
     <div class="card-body">
       <h5 class="card-title">Pas Foto</h5>
       <p class="card-text">
@@ -83,7 +83,7 @@
   </div>
 
   <div class="card g-col-4 mx-4 my-4" style="width: 16rem;">
-    <img src="{{ asset('publicimage/maternity.jpg') }}" class="card-img-top my-3" alt="...">
+    <img src="{{ asset('storage/images/foto_maternity/foto_maternity.jpg') }}" class="card-img-top my-3" alt="...">
     <div class="card-body">
       <h5 class="card-title">Maternity</h5>
       <p class="card-text">
@@ -100,7 +100,7 @@
   </div>
 
   <div class="card g-col-4 mx-4 my-4" style="width: 16rem;">
-    <img src="{{ asset('publicimage/photoshoot.jpg') }}" class="card-img-top my-3" alt="...">
+    <img src="{{ asset('storage/images/foto_photoshoot/foto_photoshoot.jpg') }}" class="card-img-top my-3" alt="...">
     <div class="card-body">
       <h5 class="card-title">Photoshoot</h5>
       <p class="card-text">
@@ -117,7 +117,7 @@
   </div>
 
   <div class="card g-col-4 mx-4 my-4" style="width: 16rem;">
-    <img src="{{ asset('publicimage/personal.jpg') }}" class="card-img-top my-3" alt="...">
+    <img src="{{ asset('storage/images/foto_personal/foto_personal.jpg') }}" class="card-img-top my-3" alt="...">
     <div class="card-body">
       <h5 class="card-title">Personal</h5>
       <p class="card-text">
@@ -134,7 +134,7 @@
   </div>
 
   <div class="card g-col-4 mx-4 my-4" style="width: 16rem;">
-    <img src="{{ asset('publicimage/grup.jpg') }}" class="card-img-top my-3" alt="...">
+    <img src="{{ asset('storage/images/foto_grup/foto_grup.jpg') }}" class="card-img-top my-3" alt="...">
     <div class="card-body">
       <h5 class="card-title">Grup</h5>
       <p class="card-text">
