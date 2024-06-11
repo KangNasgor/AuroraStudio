@@ -16,12 +16,12 @@ class AdminMiddleware
      *
      * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
      */
-    public function handle(Request $request, Closure $next, string $role)
+    public function handle(Request $request, Closure $next)
     {
         if(Auth::check()){
             $user = Auth::user();
-            dd($user);
-            if($user->isAdmin()){
+            $admin = Admin::where('name', $user->name)->first();
+            if($admin && $admin->isAdmin()){
                 return $next($request);
             }
             else{

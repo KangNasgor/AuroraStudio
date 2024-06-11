@@ -4,7 +4,7 @@
     <div class="col-12 table-responsive">
         <a class="btn btn-secondary" href="{{route('photographers.create')}}">Create</a>
         <a class="btn btn-warning" href="{{route('photographers.history')}}">History</a>
-        <table id="table" class="table table-striped table-secondary table-hover table-borderless">
+        <table id="table" class="table display responsive nowrap table-striped table-secondary table-hover table-borderless" width="100%">
             <thead>
                 <tr>
                     <th>Nama</th>

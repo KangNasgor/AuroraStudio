@@ -28,7 +28,7 @@ Route::controller(LoginController::class)->group(function() {
     Route::post('/loginadmin/proses', 'loginsubmit')->name('login.submit');
     Route::get('/logoutadmin', 'logout')->name('login.logout');
 });
-Route::middleware(AdminMiddleware::class)->group(function(){
+Route::middleware(['admin'])->group (function(){
     Route::controller(CustomersController::class)->group(function () {
         Route::get('/customers', 'customers')->name('customers');
         Route::get('/customers/create', 'create')->name('customers.create');

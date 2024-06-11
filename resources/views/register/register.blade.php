@@ -1,3 +1,5 @@
+@extends('navbar')
+@section('content')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -69,9 +71,10 @@
         </div>
         <div class="button">
             <button type="submit" class="btn btn-primary">Register</button>
-            <a href="/" type="button" class="btn btn-secondary">Login</a>
+            <a href="/loginadmin" type="button" class="btn btn-secondary">Login</a>
         </div>
     </form>
 </div>
 </body>
 </html>
+@endsection

@@ -102,7 +102,6 @@
     <div class="regisloginbutton">
         <div class="regisloginbutton2"> 
             <a href="/registrasi" class="btn btn-primary mt-4">Register</a> 
-            <a href="/login" class="btn btn-primary mt-4">Login</a>   
         </div> 
     </div>
 @endguest

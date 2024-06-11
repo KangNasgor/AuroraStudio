@@ -1,3 +1,5 @@
+@extends('navbar')
+@section('content')
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -20,6 +22,7 @@
 
         
         <script src="https://kit.fontawesome.com/3ab26b6439.js" crossorigin="anonymous"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <style>
             .login{
                 display: flex;
@@ -42,18 +45,23 @@
             .button a{
                 color: white !important;
             }
+            @media screen and (max-width: 321px){
+                .login{
+                    padding: 5px;
+                }
+            }
         </style>
     </head>
     <body class="wrapper">
-        <div class="login">
-            <form action="/loginadmin/proses" method="POST" class="form form-control">
+        <div class="login container-fluid">
+            <form action="/loginadmin/proses" method="POST" class="form form-control row">
                 @csrf
                 @method('POST')
-                <div class="box justify-content-evenly">
+                <div class="box justify-content-evenly col-xs-6">
                     <label class="form weight-bold col-4">Name</label>
                     <input class="border border-secondary rounded-1 col-6" name="name" placeholder="Someone" required>
                 </div>
-                <div class="box justify-content-evenly">
+                <div class="box justify-content-evenly col-xs-6">
                     <label class="form weight-bold col-4">Password</label>
                     <input class="border border-secondary rounded-1 col-6" name="password" placeholder="Password" required>
                 </div>
@@ -65,3 +73,4 @@
         </div>
     </body>
 </html>
+@endsection

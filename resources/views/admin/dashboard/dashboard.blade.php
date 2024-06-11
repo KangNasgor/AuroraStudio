@@ -10,8 +10,7 @@
         </div>
         <div class="card" style="width: 18rem;">
             <div class="card-body">
-              <h5 class="card-title">Sessions</h5>
-              <p class="card-subtitle text-muted">Photographer in a sessions</p>
+              <h5 class="card-title">Photographer in Sessions</h5>
               <ul>
               @foreach ($sessions as $sesi)
                 <li class="card-text">{{$sesi->photographer->name}}</li>
@@ -23,10 +22,6 @@
     </div>
 @endsection
 <style>
-    .card-body{
-        display: flex;
-        flex-direction: column;
-    }
     .card-body p{
         font-size: 12px;
     }

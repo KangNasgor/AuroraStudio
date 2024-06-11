@@ -30,6 +30,7 @@ class Admin extends Authenticatable
         'updated_at',
         'created_at',
         'status_aktif',
+        'roles',
     ];
     protected $primaryKey = 'id';
     /**
